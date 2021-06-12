@@ -1,4 +1,4 @@
 
-DROP TABLE IF EXISTS realmeal_db;
+DROP DATABASE IF EXISTS realmeal_db;
 
-CREATE TABLE realmeal_db;
+CREATE DATABASE realmeal_db;
