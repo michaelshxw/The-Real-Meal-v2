@@ -1,5 +1,5 @@
 const router = require('express').Router();
-//const { Our Model } = require('../models');
+const { User } = require('../models');
 
 // GET all posts for homepage
 router.get('/', async (req, res) => {
@@ -13,6 +13,12 @@ router.get('/login', async (req, res) => {
 router.get('/signup', async (req, res) => {
   res.render('signup')
 });
+
+router.get('/plan', async (req, res) => {
+  res.render('mealplan')
+});
+
+
   
   
 
