@@ -19,15 +19,18 @@
   },
   "homepage": "https://github.com/michaelshxw/project-two#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "connect-session-sequelize": "^7.1.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.2",
     "mysql2": "^2.2.5",
-    "nodemon": "^2.0.7",
     "path": "^0.12.7",
     "sequelize": "^6.6.2",
     "vue-uuid": "^2.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
