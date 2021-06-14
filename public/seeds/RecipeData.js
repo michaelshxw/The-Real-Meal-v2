@@ -1,4 +1,4 @@
-const { Recipie } = require('../models');
+const { Recipe: Recipe } = require('../models');
 
 const meals = [
     {
@@ -27,6 +27,6 @@ const meals = [
     }
 ],
 
-const seedMeals = () => Recipie.bulkCreate(meals);
+const seedMeals = () => Recipe.bulkCreate(meals);
 
 module.exports = seedMeals;
