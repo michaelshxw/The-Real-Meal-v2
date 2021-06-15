@@ -5,7 +5,7 @@ const sequelize = require('./config/connection');
 //const routes = require('./controllers');
 const exphbs = require('express-handlebars');//aded
 const expressHandlebars = exphbs.create({}); //added
-const dotenv = require("dotenv")
+require('dotenv').config();
 
 
 // vue NPM package for generating UUIDs
@@ -13,7 +13,7 @@ const { v4: uuidv4 } = require('uuid');
 
 // assign express object to expressServer;
 const app = express(); //app being convention for Express() 
-const PORT = process.env.PORT || 3306;
+const PORT = process.env.PORT || 8000;
 
 //Register handlebars to express
 app.engine('handlebars', expressHandlebars.engine);
