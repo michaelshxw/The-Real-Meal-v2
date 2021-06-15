@@ -1,8 +1,15 @@
 //modulised rotuer to API routers.
 
 const router = require('express').Router();
-const apiRoutes = require('./api'); // require the index.js in the API folder
+const userRouter = require('./users');
 
-router.use('/api', apiRoutes); //middleware 
+router.use('/users',userRouter);
+
+router.get('/',(req,res) => {
+    res.send("Welcome to the real meal app :)");
+});
+
 
 module.exports = router;
+
+
