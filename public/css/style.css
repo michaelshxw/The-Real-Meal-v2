@@ -18,3 +18,11 @@
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
 }
+
+.successIcon {
+    position: relative;
+    text-align: center;
+    left: 50%;
+    top: 40%;
+    height: 200px;
+}
