@@ -3,12 +3,11 @@
 const router = require('express').Router();
 const userRouter = require('./users');
 
-router.use('/users',userRouter);
-
 router.get('/',(req,res) => {
-    res.send("Welcome to the real meal app :)");
+    res.render("../views/index");
 });
 
+router.use('/users',userRouter);
 
 module.exports = router;
 
