@@ -3,25 +3,16 @@ const { User } = require('../models');
 
 // GET all posts for homepage
 router.get('/', async (req, res) => {
-  res.render('homepage')
+  res.render('landingpage')
 });
 
-router.get('/login', async (req, res) => {
-  res.render('success')
-});
-
-router.get('/signup', async (req, res) => {
-  res.render('success')
+router.get('/loggedin', async (req, res) => {
+  res.render('home')
 });
 
 router.get('/setupprofile1', async (req, res) => {
   res.render('setupprofile1')
 });
-
-router.get('/plan', async (req, res) => {
-  res.render('mealplan')
-});
-
 
 router.get('/setupprofile2', async (req, res) => {
   res.render('setupprofile2')
