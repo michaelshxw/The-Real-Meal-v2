@@ -1,160 +1,20 @@
-@font-face {
-    font-family: "bastian";
-    src: url(/fonts/Bastian.ttf);
+.mainContainer {
+    margin-top: 150px !important;
+    width: 80% !important;
+    filter: drop-shadow(6px 6px 5px rgb(85, 85, 85));
+    border-radius: 50px !important;
 }
 
-/* background color for entire app */
-body {
-    background-color: white;
-    /* background-color: #68a12f; */
-    /* background-color: rgb(208, 255, 208); */
+#leftScreen {
+    height: 65vh;
+    background-color: #8fe3b8;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
 }
 
-/* padding for container to center it horizontally */
-.container {
-    padding-top: 500px; /*changed to make it come down*/
-    padding-bottom: 150px; /*Added*/
-}
-
-/* header styling */
-h2 {
-    font-family: "bastian";
-}
-
-h3 {
-    font-family: "bastian";
-    font-size: 70px !important;
-}
-
-.signupheader {
-    font-family: "bastian";
-    font-size: 5vw;
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%)
-}
-
-#signupmargin {
-    font-size: 10vw;
-    margin-top: 100px;
-}
-
-/* padding for each form page to center and align properly */
-.three {
-    padding-left: 500px; /*changed to make it move to the right*/
-    margin-top: -80px !important;
-}
-
-.four {
-    padding-left: 100px;
-}
-
-/* button styling */
-.buttons {
-    align-items: center;
-    position: absolute;
-    left: 50%;
-    top: 55%;
-    transform: translate(-50%, 50%);
-}
-
-.cmp-buttons {
-    margin-top: -350px;
-}
-
-/* hide all screens to begin */
-.screen {
-    display: none;
-}
-
-/* display first screen on load */
-.one {
-    display: block;
-}
-
-/* create meal plan styling */
-
-.column {
-    border: solid black 3px;
-}
-
-.columns {
-    padding: 100px;
-    height: auto;
-}
-
-#recipe-image {
-    padding: 120px;
-    border: solid green 5px;
-}
-
-#recipe-image::after {
-    content: "recipe image";
-}
-
-#recipe-url {
-    padding: 100px;
-    border: solid yellow 5px;
-}
-
-#recipe-image::after {
-    content: "recipe image";
-}
-
-#recipe-title {
-    padding: 20px;
-    border: solid red 5px !important;
-}
-
-#recipe-title::after {
-    content: "recipe title";
-}
-
-h1 {
-    margin-top: -50px !important;
-    font-family: 'bastian';
-    text-align: center;
-}
-
-.button {
-    width: 150px;
-    border: 3px solid #88CA5E !important;
-    border-radius: 100px !important;
-    transition: all 0.5s ease 0s;
-}
-
-#reg-now {
-    width: 200px;
-    height: 65px;
-}
-
-#reg-later {
-    width: 200px;
-    height: 65px;
-}
-
-.reg-home{
-    width: 200px;
-    height: 65px;
-}
-
-.button:hover {
-    background: #D2FBA4;
-    border-color:  #88CA5E !important;
-    transition: all 0.5s ease 0s;
-}
-
-#editBtn {
-    position: relative;
-    top: 20px;
-    left: 20px;
-}
-
-.saveModal {
-    background-color: #88CA5E !important;
-}
-
-#cmpCard {
-    border: solid green 5px;
+#rightScreen {
+    background: white;
+    height: 65vh;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
