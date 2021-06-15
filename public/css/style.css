@@ -1,0 +1,28 @@
+.mainContainer {
+    margin-top: 150px !important;
+    width: 80% !important;
+    filter: drop-shadow(6px 6px 5px rgb(85, 85, 85));
+    border-radius: 50px !important;
+}
+
+#leftScreen {
+    height: 65vh;
+    background-color: #8fe3b8;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+#rightScreen {
+    background: white;
+    height: 65vh;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.successIcon {
+    position: relative;
+    text-align: center;
+    left: 50%;
+    top: 40%;
+    height: 200px;
+}
