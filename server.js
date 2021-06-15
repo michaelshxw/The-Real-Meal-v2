@@ -5,6 +5,7 @@ const sequelize = require('./config/connection');
 //const routes = require('./controllers');
 const exphbs = require('express-handlebars');//aded
 const expressHandlebars = exphbs.create({}); //added
+const dotenv = require("dotenv")
 
 
 // vue NPM package for generating UUIDs
@@ -26,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));//added
 app.use(require('./controllers/'));//added
 
 //Sync sequilizer 
-// sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Real Meal is listening to Port: ' + PORT));
-// });
+});
 
