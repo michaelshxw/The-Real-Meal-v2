@@ -12,7 +12,7 @@ const { v4: uuidv4 } = require('uuid');
 
 // assign express object to expressServer;
 const app = express(); //app being convention for Express() 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3001;
 
 //Register handlebars to express
 app.engine('handlebars', expressHandlebars.engine);
@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));//added
 app.use(require('./controllers/'));//added
 
 //Sync sequilizer 
-sequelize.sync({ force: false }).then(() => {
+// sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Real Meal is listening to Port: ' + PORT));
-});
+// });
 
