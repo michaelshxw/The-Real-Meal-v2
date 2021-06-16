@@ -6,7 +6,7 @@ router.get('/', async (req, res) => {
   res.render('landingpage')
 });
 
-router.get('/loggedin', async (req, res) => {
+router.get('/login', async (req, res) => {
   res.render('home')
 });
 

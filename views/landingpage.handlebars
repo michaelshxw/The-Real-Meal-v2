@@ -3,14 +3,16 @@
     <h1>Welcome Back!</h1>
     <form class="login-form">
       <div class="mb-3">
-        <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Email Address">
+        <label for="email-login" class="form-label">Email address:</label>
+        <input type="email" class="form-control" id="email-login">
       </div>
-      <div class="mb-3">
-        <input type="password" class="form-control" placeholder="Password">
-      </div>
-      <button type="submit" class="btn btn-secondary" id="loginBtn">Login</button>
+      <label for="password-login" class="form-label">Password:</label>
+      <input type="password" id="password-login" class="form-control">
+      <br>
+      <button type="submit" class="btn btn-secondary">Login</button>
     </form>
   </div>
+
   <div class="col" id="rightScreen">
     <h2>New Here?</h2>
     <p>Sign up below!</p>
@@ -20,21 +22,27 @@
       <button class="btn btn-warning">Google Btn</button>
     </div>
     <br>
+    <p>Or use your email...</p>
     {{!-- input --}}
-    <form>
+    <form class="signup-form">
       <div class="mb-3">
-        <input type="email" class="form-control" placeholder="Email Address">
+        <label for="email-signup">Email:</label>
+        <input class="form-control" type="email" id="email-signup"/>
       </div>
       <div class="mb-3">
-        <input type="username" class="form-control" placeholder="Username">
+        <label for="username-signup" class="form-label">Username:</label>
+        <input class="form-control" type="username" id="username-signup"/>
       </div>
       <div class="mb-3">
-        <input type="password" class="form-control" placeholder="Password">
+        <label for="password-signup">Password:</label>
+        <input class="form-control" type="password" id="password-signup"/>
       </div>
-      <button type="submit" class="btn btn-secondary" id="signUpBtn">Sign Up</button>
+      <div class="mb-3">
+        <button class="btn btn-secondary" type="submit">signup</button>
+      </div>
     </form>
 
   </div>
 </div>
 
-<script src="../public/js/login.js"></script>
+<script src="./js/login.js"></script>
