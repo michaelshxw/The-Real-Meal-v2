@@ -6,6 +6,11 @@ router.get('/',(req,res) => {
     res.send("running login?")
 });
 
+router.post('/login',(req,res) => 
+{
+    console.log(req.body);
+})
+
 module.exports = router;
 
 

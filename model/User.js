@@ -21,7 +21,7 @@ User.init(
     },
     lName: 
     {
-      type: DataTypes.STRING
+      type: DataTypes.STRING 
     },
     userName: 
     {
