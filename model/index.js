@@ -1,5 +1,4 @@
 const favouriteRecipies = require("./favouriteRecipies");
-const User = require("./User");
 const userProfile = require("./userProfile");
 
 // define relationships between the tables 
@@ -7,6 +6,5 @@ const userProfile = require("./userProfile");
 module.exports = 
 {
     favouriteRecipies, 
-    userProfile, 
-    User
+    userProfile,
 };

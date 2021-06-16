@@ -1,15 +1,9 @@
 //modulised router 
-
 const router = require('express').Router();
+const users = require("../controllers/user");
 
-router.get('/',(req,res) => {
-    res.send("running login?")
-});
-
-router.post('/login',(req,res) => 
-{
-    console.log(req.body);
-})
+router.get('/',(req,res) => {console.log('hi')});
+router.post('/login', users.check_login);
 
 module.exports = router;
 
