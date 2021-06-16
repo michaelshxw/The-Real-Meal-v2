@@ -27,15 +27,12 @@ app.use('/',homeRouter);//middleware to run homeRouter on request to homepage.
 app.use('/users',userRouter);//middleware to run userRouter on request to /users.
 app.use('/recipes',recipesRouter);//middleware to run userRouter on request to /recipes.
 
-
-    app.listen(PORT, () => 
-    {
-
-      sequelize.sync()
-      .then(() =>{console.log("Database sync")})
-      .catch((err) => {console.log("error", err)});
-      
-    })
+  app.listen(PORT, () => 
+  {
+    sequelize.authenticate()
+    .then(() =>{console.log("Database sync")})
+    .catch((err) => {console.log("error", err)});
+  })
  
 
 
