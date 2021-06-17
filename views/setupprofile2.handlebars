@@ -7,18 +7,32 @@
         {{!-- input --}}
         <form>
             <div class="mb-3">
-                <input type="weight" class="form-control" placeholder="Weight">
+                <label for="profile-weight" class="form-label">Weight:</label>
+                <input type="name" class="form-control" placeholder="70kgs" id="profile-weight">
             </div>
             <div class="mb-3">
-                <input type="Height" class="form-control" placeholder="Height">
+                <label for="profile-height" class="form-label">Height:</label>
+                <input type="email" class="form-control" placeholder="170cms" id="profile-height">
             </div>
             <div class="mb-3">
-                <input type="Weight Goal" class="form-control" placeholder="Weight Goal">
+                <label for="profile-weight-goal" class="form-label">Weight Goal</label>
+                <select class="form-select" id="profile-weight-goal">
+                    <option selected>Prefer not to say</option>
+                    <option value="1">Lose Weight</option>
+                    <option value="2">Maintain Weight</option>
+                    <option value="3">Increase Weight</option>
+                </select>
             </div>
             <div class="mb-3">
-                <input type="Activity Level" class="form-control" placeholder="Activity Level">
+                <label for="profile-activity-level" class="form-label">Activity Level:</label>
+                <select class="form-select" id="profile-activity-level">
+                    <option selected>Prefer not to say</option>
+                    <option value="1">Sedentary</option>
+                    <option value="2">Lightly Active</option>
+                    <option value="3">Moderately Active</option>
+                    <option value="4">Highly Active</option>
+                </select>
             </div>
-            
             <button type="submit" class="btn btn-secondary" id="nextBtn2">Next</button>
         </form>
 

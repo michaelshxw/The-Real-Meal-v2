@@ -12,7 +12,7 @@ const routes = require('./controllers');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 
-// vue NPM package for generating UUIDs
+// vue NPM package   generating UUIDs
 const { v4: uuidv4 } = require('uuid');
 
 // assign express object to expressServer;

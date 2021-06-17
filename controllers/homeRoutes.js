@@ -6,21 +6,28 @@ router.get('/', async (req, res) => {
   res.render('landingpage')
 });
 
-router.get('/login', async (req, res) => {
+router.get('/home', async (req, res) => {
   res.render('home')
 });
 
-router.get('/setupprofile1', async (req, res) => {
+router.get('/setup1', async (req, res) => {
   res.render('setupprofile1')
 });
 
-router.get('/setupprofile2', async (req, res) => {
+router.get('/setup2', async (req, res) => {
   res.render('setupprofile2')
 });
 
-router.get('/setupprofile3', async (req, res) => {
+router.get('/setup3', async (req, res) => {
   res.render('setupprofile3')
 });
+
+router.get('/dailyplan', async (req, res) => {
+  res.render('dailyplan')
+});
+
+
+
 
 
   
