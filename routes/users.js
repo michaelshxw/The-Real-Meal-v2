@@ -1,6 +1,6 @@
 //modulised router 
 const router = require('express').Router();
-const users = require("../controllers/user");
+const users = require("../controllers/users");
 
 router.get('/',(req,res) => {}); // same as /users
 
