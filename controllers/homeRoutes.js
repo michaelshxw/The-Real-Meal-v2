@@ -15,7 +15,7 @@ router.get('/setup1', async (req, res) => {
 });
 
 router.get('/setup2', async (req, res) => {
-  res.render('setupprofile2')
+  res.render('setupprofile2') 
 });
 
 router.get('/setup3', async (req, res) => {
