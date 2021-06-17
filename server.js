@@ -33,7 +33,14 @@ app.use('/loggedin',loggedInRouter);
   app.listen(PORT, () => 
   {
     sequelize.authenticate()
-    .then(() =>{console.log("Database sync")})
+    .then(() =>
+    {
+    sequelize.sync({alter: true})
+    })
+    .then(() =>
+    {
+      console.log("Database sync")
+    })
     .catch((err) => {console.log("error", err)});
   })
  
