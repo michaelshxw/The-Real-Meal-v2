@@ -1,4 +1,9 @@
-const {User} = require("../model/User");
+const sequelize = require("../config/connection")
+const User = require("../model/User");
+
+const seedDatabase = async() => {
+    await sequelize.sync();
+}
 
 exports.user_login = async function (req,res)
 {
@@ -18,10 +23,13 @@ exports.user_signup = async function (req,res)
         }
 
     });
-    
+
     const instance = arr[0] // the first element is the instance
     const wasCreated = arr[1] // the second element tells us if the instance was newly created
-    console.log(instance) // {id: 1, username: 'Barry', etc...}
-    console.log(wasCreated) // tells us if user created or already exists.
+    if(wasCreated)
+    {
+        res.send("Signup Success");
+    }
 }
 
+seedDatabase();
