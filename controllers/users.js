@@ -62,8 +62,13 @@ exports.user_signup = async function (req,res)
       }
       else
       {
-        res.status(500)
+        res.status(504);
+        res.send();
       }
-    }).catch((err) => res.status(504))
+    }).catch((err) => {
+      console.log('There was an error', err.message)
+      res.status(504)
+      res.send();
+    });
   }
 seedDatabase();
