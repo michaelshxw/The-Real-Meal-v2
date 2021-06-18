@@ -12,44 +12,40 @@ exports.user_login = async function (req,res)
   const password = req.body.password;
 
   //find user by username
-  const findUser = await User.findOne(
+  await User.findOne(
   {
       where: 
       {
       email: req.body.email,
       }
-  });
 
-  //check if user exists
-  if(findUser === null)
-  {
-    console.log("invalid credentials");
-  }
-  else
-  {
-    //use class method checkPassword() against the user object 
-    //has users input password 
+  }).then((user) => {
 
-   const checkPass = findUser.checkPassword(req.body.password);
-   
-   if(checkPass)
-   {
-     res.send();
-   }
-   else
-   {
-     res.status(404);
-   }
-
-  }
-
-
-    
+    if(user === null)
+    {
+      res.status(504);
+    }
+    else
+    {
+      //use class method checkPassword() against the user object 
+      //has users input password 
+      const checkPass = user.checkPassword(req.body.password);
+      if(checkPass)
+      {
+        res.send();
+      }
+      else
+      {
+        res.status(504);
+        res.send();
+      }
+    }
+  }).catch((err) => console.log(err.message));
 }
 
 exports.user_signup = async function (req,res)
 {
-    const arr = await User.findOrCreate(
+    await User.findOrCreate(
     {
         where: 
         {
@@ -57,16 +53,17 @@ exports.user_signup = async function (req,res)
         email: req.body.email,
         password: req.body.password,
         }
-    })
-
-    const wasCreated = arr[1] // the second element tells us if the instance was newly created
-
-    if(wasCreated)
+    }).then((arr) =>
     {
-        res.send("Signup Success");
-    }
-}
-
-
-
+      const wasCreated = arr[1] // the second element tells us if the instance was newly created
+      if(wasCreated)
+      {
+          res.send("Signup Success");
+      }
+      else
+      {
+        res.status(500)
+      }
+    }).catch((err) => res.status(504))
+  }
 seedDatabase();
