@@ -9,50 +9,42 @@ const seedDatabase = async() => {
 
 exports.user_login = async function (req,res)
 {
-    const password = req.body.password;
+  const password = req.body.password;
 
-    bcrypt.genSalt(10, async function (err, salt) {
-      if (err) 
+  //find user by username
+  const findUser = await User.findOne(
+  {
+      where: 
       {
-        throw err
-      } 
-      else 
-      {
-        bcrypt.hash(password, salt, async function(err, hash) {
-          if (err) 
-          {
-            throw err
-          } 
-          else 
-            {
-                const findUser = await User.findOne(
-                {
-                    where: 
-                    {
-                    email: req.body.email,
-                    }
-                });
-                
-                if(findUser === null)
-                {
-                    console.log("invalid credentials");
-                }
-                else
-                {
-                    bcrypt.compare(password, hash, function(err, isMatch) {
-                        if (err) {
-                          throw err
-                        } else if (!isMatch) {
-                          console.log("fail");
-                        } else {
-                            res.send("ok");
-                        }
-                      })
-                }
-            }
-        });
-        }
-    });
+      email: req.body.email,
+      }
+  });
+
+  //check if user exists
+  if(findUser === null)
+  {
+    console.log("invalid credentials");
+  }
+  else
+  {
+    //use class method checkPassword() against the user object 
+    //has users input password 
+
+   const checkPass = findUser.checkPassword(req.body.password);
+   
+   if(checkPass)
+   {
+     res.send();
+   }
+   else
+   {
+     res.status(404);
+   }
+
+  }
+
+
+    
 }
 
 exports.user_signup = async function (req,res)
