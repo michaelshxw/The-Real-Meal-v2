@@ -23,7 +23,7 @@ exports.user_login = async function (req,res)
 
     if(user === null)
     {
-      res.status(504);
+      res.status(500);
     }
     else
     {
@@ -36,7 +36,7 @@ exports.user_login = async function (req,res)
       }
       else
       {
-        res.status(504);
+        res.status(500);
         res.send();
       }
     }
@@ -62,13 +62,14 @@ exports.user_signup = async function (req,res)
       }
       else
       {
-        res.status(504);
+        res.status(500);
         res.send();
       }
     }).catch((err) => {
       console.log('There was an error', err.message)
-      res.status(504)
+      res.status(500)
       res.send();
     });
   }
+
 seedDatabase();
