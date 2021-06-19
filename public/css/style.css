@@ -1,3 +1,5 @@
+/* MAIN TEMPLATE */
+
 .mainContainer {
     margin-top: 150px !important;
     width: 80% !important;
@@ -32,4 +34,45 @@ nav {
     top: 150px;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+/* SETUP PROFILE FORM */
+
+#profileSetup {
+    margin: 50px auto;
+    padding: 0px 50px;
+    width: 100%;
+    min-width: 300px;
+}
+  
+input.invalid {
+    background-color: #ffb8b8;
+}
+  
+.page {
+    display: none;
+}
+  
+.pageIndicator {
+    text-align: center;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #7c7c7c;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+  
+.pageIndicator.active {
+    opacity: 1;
+}
+  
+.pageIndicator.finish {
+    background-color: #00ce22;
+}
+
+.pageCounter {
+    margin-top: 30px;
+    text-align: center;
 }
