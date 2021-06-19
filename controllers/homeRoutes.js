@@ -18,15 +18,12 @@ router.get('/home', async (req, res) => {
 });
 
 router.get('/setup1', async (req, res) => {
-  res.render('profile')
-});
-
-router.get('/setup2', async (req, res) => {
-  res.render('setupprofile2')
-});
-
-router.get('/setup3', async (req, res) => {
-  res.render('setupprofile3')
+  if (req.session.loggedIn) {
+    res.render('profile');
+    return;
+  } else {
+    res.redirect('/');
+  }
 });
 
 router.get('/login', (req, res) => {
@@ -39,8 +36,19 @@ router.get('/login', (req, res) => {
 
 });
 
+
 router.get('/dailyplan', async (req, res) => {
-  res.render('dailyplan')
+  if (req.session.loggedIn) {
+    res.render('dailyplan');
+    return;
+  } else {
+    res.redirect('/');
+  }
 });
+
+
+
+
+
 
 module.exports = router;
