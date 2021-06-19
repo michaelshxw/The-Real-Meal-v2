@@ -39,7 +39,9 @@ router.get('/login', (req, res) => {
 
 router.get('/dailyplan', async (req, res) => {
   if (req.session.loggedIn) {
-    res.render('dailyplan');
+    res.render('dailyplan', {
+      loggedIn: req.session.loggedIn
+    });
     return;
   } else {
     res.redirect('/');
