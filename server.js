@@ -11,7 +11,8 @@ const sequelize = require('./config/connection');
 const homeRouter = require('./routes/index');
 const userRouter = require('./routes/users');
 const recipesRouter = require('./routes/recipes');
-const loggedInRouter = require('./routes/loggedin');
+const home = require('./routes/home');
+const profile = require('./routes/profile');
 
 // assign express object
 const app = express(); //app being convention for Express() 
@@ -33,7 +34,8 @@ app.use(express.json());
 app.use('/',homeRouter);//middleware to run homeRouter on request to homepage.
 app.use('/users',userRouter);//middleware to run userRouter on request to /users.
 app.use('/recipes',recipesRouter);//middleware to run userRouter on request to /recipes.
-app.use('/loggedin',loggedInRouter); //middleware to run loggedInRouter on request to /loggedin
+app.use('/home',home); //middleware to run home on request to /loggedin
+app.use('/profile',profile); //middleware to run home on request to /profile
 
 //open port for listening 
   app.listen(PORT, () => 
