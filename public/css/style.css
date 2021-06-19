@@ -116,7 +116,7 @@ h3 {
     background-color: lightskyblue;
 }
 
-/* DAILY PLAN */
+/* DAILY MEAL PLAN */
 
 .dailyPlanCards {
     position: relative;
@@ -127,3 +127,5 @@ h3 {
 .dailyPlanDescription {
     height: 250px;
 }
+
+/* WEEKLY MEAL PLAN */
