@@ -32,6 +32,7 @@ exports.user_login = async function (req,res)
       const checkPass = user.checkPassword(req.body.password);
       if(checkPass)
       {
+        setSession(req.session, req.body.email);
         res.send();
       }
       else
@@ -70,6 +71,14 @@ exports.user_signup = async function (req,res)
       res.status(500)
       res.send();
     });
+  }
+
+  function setSession(reqSession, email,)
+  {
+    reqSession.user = {};
+    reqSession.user.email = email;
+    reqSession.user.loggedIn = true;
+    return;
   }
 
 seedDatabase();

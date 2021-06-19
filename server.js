@@ -3,8 +3,7 @@ const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
 const hbs = exphbs.create({});
-const cookieParser = require('cookie-parser');
-const sessions = require('express-sessiosn');
+const session = require('express-session');
 
 //import local modules
 const sequelize = require('./config/connection');
@@ -19,8 +18,7 @@ const app = express(); //app being convention for Express()
 const PORT = process.env.PORT || 8000;
 
 //setup sessions management middleware
-app.use(cookieParser());
-app.use(session({secret: "Can we have an A please?"}));
+app.use(session({secret: "we need an A..:D)", resave:false, saveUninitialized:false})); //default false values for a session.
 
 //enable the handlebars engine setup
 app.engine('handlebars', hbs.engine);
@@ -37,9 +35,10 @@ app.use('/users',userRouter);//middleware to run userRouter on request to /users
 app.use('/recipes',recipesRouter);//middleware to run userRouter on request to /recipes.
 app.use('/loggedin',loggedInRouter); //middleware to run loggedInRouter on request to /loggedin
 
+//open port for listening 
   app.listen(PORT, () => 
   {
-    sequelize.authenticate()
+    sequelize.authenticate()//auth to db
     .then(() =>
     {
       console.log("Database connected")
