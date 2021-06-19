@@ -48,6 +48,17 @@ router.get('/dailyplan', async (req, res) => {
   }
 });
 
+router.get('/weeklyplan', async (req, res) => {
+  if (req.session.loggedIn) {
+    res.render('weeklyplan', {
+      loggedIn: req.session.loggedIn
+    });
+    return;
+  } else {
+    res.redirect('/');
+  }
+});
+
 
 
 
