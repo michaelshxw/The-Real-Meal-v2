@@ -93,6 +93,9 @@
                     </label>
                 </div>
             </div>
+
+            {{!-- page four --}}
+
             <div class="page">
                 <h3>Macronutrients</h3>
                 <label for="profile-macrosCarbs" class="form-label">Carbs</label>
@@ -101,16 +104,20 @@
                 <input type="text" class="col-lg-4 form-control" placeholder="20g" id="profile-macrosFat">
                 <label for="profile-macrosProtein" class="form-label">Protein</label>
                 <input type="text" class="form-control" placeholder="30g" id="profile-macrosProtein">
-
             </div>
+
+            {{!-- next and previous buttons --}}
 
             <div style="overflow:auto;">
                 <div style="float:right;">
                     <button class="btn btn-primary" type="button" id="previousBtn"
                         onclick="nextPrevious(-1)">Previous</button>
-                    <button class="btn btn-primary" type="button" id="nextBtn" onclick="nextPrevious(1)">Next</button>
+                    <button class="btn btn-primary" type="button" id="nextBtn" 
+                        onclick="nextPrevious(1)">Next</button>
                 </div>
             </div>
+
+            {{!-- page counter / indicator --}}
             <div class="pageCounter">
                 <span class="pageIndicator"></span>
                 <span class="pageIndicator"></span>
