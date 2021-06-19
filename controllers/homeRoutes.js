@@ -40,7 +40,9 @@ router.get('/login', (req, res) => {
 });
 
 
-
+router.get('/dailyplan', async (req, res) => {
+  res.render('dailyplan')
+});
 
 
 
