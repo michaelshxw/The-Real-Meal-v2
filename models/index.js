@@ -1,12 +1,12 @@
-const favouriteRecipies = require("./favouriteRecipes");
+const favouriteRecipes = require("./favouriteRecipes");
 const userProfile = require("./userProfile");
 const User = require("./User");
 
-// define relationships between the tables 
+// define relationships between tables 
 
 module.exports = 
 {
-    favouriteRecipies, 
+    favouriteRecipes, 
     userProfile,
     User,
 };
