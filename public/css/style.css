@@ -120,7 +120,7 @@ h3 {
 
 .dailyPlanCards {
     position: relative;
-    margin-top: 100px;
+    margin-top: 20px;
     height: 450px;
 }
 
@@ -133,5 +133,5 @@ h3 {
 #v-pills-tab {
     position: relative;
     height: 400px;
-    top: 125px;
+    top: 45px;
 }
