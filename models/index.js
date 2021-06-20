@@ -1,5 +1,5 @@
 const Recipes = require("./Recipe");
-const userProfile = require("./userProfile");
+const Profile = require("./Profile");
 const User = require("./User");
 
 // define relationships between tables 
@@ -7,6 +7,6 @@ const User = require("./User");
 module.exports = 
 {
     Recipes, 
-    userProfile,
+    Profile,
     User,
 };
