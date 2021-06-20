@@ -1,19 +1,27 @@
+// import required modules
+// const userProfile = require("../../models/UserProfile")
+
+// declare variables 
 let generatePlan = "https://api.spoonacular.com/mealplanner/generate";
 let apiKey = "?apiKey=4b2eba9b9022436d93402d88effe7013";
 let dailyPlan = "&timeFrame=day"
-let weeklyPlan = "&timeFrame=week"
 let targetCalories = "&targetCalories="
-let userCalories = ;
+// let userCalories = userProfile.calorieLimit;
+let userCalories = "1800"; // until we have the actual object, hard coded
 let dietPref = "&diet=";
+// let userDietPref = userProfile.dietaryPreference;
+let userDietPref = "vegetarian";
 let exclude = "&exclude=";
+// let userExclude = userProfile.excludeFoods;
+let userExclude = "tomatoes";
 
-
+// api request URL 
 const dailyURL = generatePlan + apiKey + dailyPlan + targetCalories + userCalories + dietPref + userDietPref + exclude + userExclude;
 console.log(dailyURL);
 
-const weeklyURL = generatePlan + apiKey + weeklyPlan + targetCalories + userCalories + dietPref + userDietPref + exclude + userExclude;
-console.log(weeklyURL);
-
+$('#genDailyPlan').click(function(){
+    const data = { name}
+})
 
 
 
