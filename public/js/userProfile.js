@@ -14,8 +14,6 @@ const profileFormHandler = async (event) => {
     const carbs = document.querySelector('#password-signup').value.trim();
     const fat = document.querySelector('#password-signup').value.trim();
     const protein = document.querySelector('#password-signup').value.trim();
-    
-
 
     if (dob && weight && height && weightGoal && activityLevel && dietaryPreference && allergies && excludeFoods && calorieLimit && measurementSystem && carbs && fat && protein) {
       const response = await fetch('/users/UserProfile', {
@@ -25,7 +23,7 @@ const profileFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        // if response ok, do something here
+        // if response ok, do something here // do we load the home page from here?
       } else {
         alert('Failed to save data');
       }
