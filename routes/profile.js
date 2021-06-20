@@ -1,6 +1,5 @@
 //modulised router 
 const router = require('express').Router()
-const users = require("../controllers/users"); //also not used here, required?
 const profile = require("../controllers/profile"); //also not used here, required?
 
 

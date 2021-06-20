@@ -1,4 +1,3 @@
-const sequelize = require("../config/connection");
 //const { Profile } = require("../models/index");
 
 exports.profile_goto = async function (req, res) {

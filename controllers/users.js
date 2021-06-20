@@ -2,11 +2,6 @@ const sequelize = require("../config/connection");
 const { User } = require("../models/index");
 
 
-const seedDatabase = async () => {
-  await sequelize.sync();
-}
-
-
 exports.user_login = async function (req, res) {
   //find user by username
   await User.findOne(
@@ -50,7 +45,7 @@ exports.user_signup = async function (req, res) {
       const wasCreated = arr[1] // the second element tells us if the instance was newly created
       if (wasCreated) {
         setSession(req.session, req.body.email);
-        res.send("Signup Success");
+        res.send("Signup Success").end();
       }
       else {
         res.status(500);
@@ -93,5 +88,3 @@ function setSession(reqSession, email,) {
   reqSession.loggedIn = true;
   return;
 }
-
-seedDatabase();
