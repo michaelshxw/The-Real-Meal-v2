@@ -20,23 +20,30 @@ Recipe.init(
             allowNull: false,
         },
         readyInMinutes:{
-            type: DataTypes.NUMBER,
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
         servings:{
-            type: DataTypes.NUMBER,
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
         sourceUrl:{
-            type: DataTypes.NUMBER,
+            type: DataTypes.STRING,
             allowNull: false,
-        }
+        },
+        /* user_id: {
+            type: DataTypes.INTEGER,
+            references: {  //References the User model's id.
+              model: 'User',
+              key: 'id',
+            },
+          } */
     },
     {
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: 'painting',
+        modelName: 'recipe',
       }
 );
 

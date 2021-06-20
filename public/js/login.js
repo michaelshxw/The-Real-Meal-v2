@@ -12,7 +12,7 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/plan');
+        document.location.replace('/create');
       } else {
         alert('Failed to log in.');
       }
