@@ -9,6 +9,8 @@ router.get('/weekly',recipes.recipe_weekly);
 
 router.get('/daily',recipes.recipe_daily);
 
+router.get('/favourites',recipes.recipe_favorites);
+
 module.exports = router;
 
 
