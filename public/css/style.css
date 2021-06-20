@@ -124,6 +124,10 @@ h3 {
     height: 580px;
 }
 
+.dailyPlanBtns {
+    position: relative;
+    margin-bottom: 100px;
+}
 .dailyPlanDescription {
-    height: 250px;
+    /* height: 250px; */
 }
