@@ -79,19 +79,21 @@ input.invalid {
 
 /* HOME SCREEN */
 
+h3 {
+    text-align: center;
+    padding-top: 50px;
+    position: relative;
+}
+
 .homeCards {
     position: relative;
-    top: 100px;
+    top: 50px;
     padding: 60px 0px;
 }
 
 .secondRow {
     position: relative;
     top: 50px;
-}
-
-.title {
-    opacity: 1 !important;
 }
 
 #dailyPlan {
@@ -112,4 +114,16 @@ input.invalid {
 #weeklyPlan {
     margin-right: 50px;
     background-color: lightskyblue;
+}
+
+/* DAILY PLAN */
+
+.dailyPlanCards {
+    position: relative;
+    margin-top: 50px;
+    height: 580px;
+}
+
+.dailyPlanDescription {
+    height: 250px;
 }
