@@ -17,17 +17,17 @@ const profileFormHandler = async (event) => {
     
 
 
-    if (username && email && password) {
-      const response = await fetch('/users/signup', {
+    if (dob && weight && height && weightGoal && activityLevel && dietaryPreference && allergies && excludeFoods && calorieLimit && measurementSystem && carbs && fat && protein) {
+      const response = await fetch('/users/UserProfile', {
         method: 'POST',
-        body: JSON.stringify({ username, email, password }),
+        body: JSON.stringify({ dob, weight, height, weightGoal, activityLevel, dietaryPreference, allergies, excludeFoods, calorieLimit, measurementSystem, carbs, fat, protein }),
         headers: { 'Content-Type': 'application/json' },
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        // if response ok, do something here
       } else {
-        alert('Failed to sign up.');
+        alert('Failed to save data');
       }
     }
   };
