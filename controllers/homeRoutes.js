@@ -59,6 +59,17 @@ router.get('/weeklyplan', async (req, res) => {
   }
 });
 
+router.get('/favourites', async (req, res) => {
+  if (req.session.loggedIn) {
+    res.render('favourites', {
+      loggedIn: req.session.loggedIn
+    });
+    return;
+  } else {
+    res.redirect('/');
+  }
+});
+
 
 
 
