@@ -1,5 +1,4 @@
 const sequelize = require("../config/connection")
-const bcrypt = require("bcryptjs"); //bcrypt is not used in this file, do we need it?
 const { User } = require("../models/index");
 
 
@@ -8,8 +7,6 @@ const seedDatabase = async () => {
 }
 
 exports.user_login = async function (req, res) {
-  const password = req.body.password; //not sure if this line is necessary, password variable isnt used
-
   //find user by username
   await User.findOne(
     {
@@ -51,7 +48,6 @@ exports.user_signup = async function (req, res) {
     }).then((arr) => {
       const wasCreated = arr[1] // the second element tells us if the instance was newly created
       if (wasCreated) {
-        //do we need a res.status here?
         res.send("Signup Success");
       }
       else {
