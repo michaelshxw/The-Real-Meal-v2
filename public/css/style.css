@@ -76,3 +76,40 @@ input.invalid {
     margin-top: 30px;
     text-align: center;
 }
+
+/* HOME SCREEN */
+
+.homeCards {
+    position: relative;
+    top: 100px;
+    padding: 60px 0px;
+}
+
+.secondRow {
+    position: relative;
+    top: 50px;
+}
+
+.title {
+    opacity: 1 !important;
+}
+
+#dailyPlan {
+    margin-left: 50px;
+    background-color: yellow;
+}
+
+#editProfile {
+    margin-left: 50px;
+    background-color: yellowgreen;
+}
+
+#favList {
+    margin-right: 50px;
+    background-color: violet;
+}
+
+#weeklyPlan {
+    margin-right: 50px;
+    background-color: lightskyblue;
+}
