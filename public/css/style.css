@@ -120,18 +120,14 @@ h3 {
 
 .dailyPlanCards {
     position: relative;
-    margin-top: 20px;
-    height: 450px;
+    margin-top: 80px;
+    height: 500px;
 }
 
-.dailyPlanDescription {
-    height: 250px;
+.recipeTitle {
+    height: 100px;
 }
 
-/* WEEKLY MEAL PLAN */
-
-#v-pills-tab {
+.planBtns {
     position: relative;
-    height: 400px;
-    top: 45px;
 }
