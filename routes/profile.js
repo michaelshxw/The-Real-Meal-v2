@@ -1,6 +1,6 @@
 //modulised router 
 const router = require('express').Router();
-const users = require("../controllers/users");
+const users = require("../controllers/users"); //also not used here, required?
 
 router.get('/',(req,res) => {res.render("../views/setup-profile-one")}); // same as /profile
 
