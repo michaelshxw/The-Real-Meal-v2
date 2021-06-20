@@ -120,14 +120,14 @@ h3 {
 
 .dailyPlanCards {
     position: relative;
-    margin-top: 50px;
-    height: 580px;
+    margin-top: 80px;
+    height: 500px;
 }
 
-.dailyPlanBtns {
-    position: relative;
-    margin-bottom: 100px;
+.recipeTitle {
+    height: 100px;
 }
-.dailyPlanDescription {
-    /* height: 250px; */
+
+.planBtns {
+    position: relative;
 }

@@ -1,5 +1,5 @@
 // import required modules
-const userProfile = require("../../models/UserProfile")
+// const userProfile = require("../../models/UserProfile")
 
 // declare variables 
 let generatePlan = "https://api.spoonacular.com/mealplanner/generate";
@@ -28,27 +28,57 @@ function dailyHttpRequest() {
         success: function (res) {
             let cardBody = document.getElementsByClassName('card-body')
             let cardBodyChildren;
+            // append recipe titles
             console.log(res.meals);
             for (let i = 0; i < cardBody.length; i++) {
                 cardBodyChildren = cardBody[i].children;
                 cardBodyChildren[0].textContent = res.meals[i].title;
+            };
+            // append recipe url to show recipe button
+            let planBtns = document.getElementsByClassName('planBtns')
+            let planBtnsChildren;
+            for (let i = 0; i < planBtns.length; i++) {
+                planBtnsChildren = planBtns[i].children;
+                planBtnsChildren[1].href = res.meals[i].sourceUrl;
+            };
+            //image appending
+            //declare variables
+            const imageLink = "https://spoonacular.com/recipeImages/";
+            const imageSize = "312x231"
+            function imageOne() {
+
+                //first image
+                let imageFormat1 = "." + res.meals[0].imageType
+                let imageOneID = res.meals[0].id + "-";
+                let imageURL1 = imageLink + imageOneID + imageSize + imageFormat1;
+                let img = document.createElement("img")
+                img.src = imageURL1
+                let src = document.querySelector('.recipeImgBreakfast')
+                src.appendChild(img)
             }
-
-
-
-
-            // recipe title one
-            // let recipeTitleOne = document.querySelector('.recipeTitleOne');
-            // let titleOne = res.meals[0].title;
-            // recipeTitleOne.append(titleOne)
-            // // recipe title two
-            // let recipeTitleTwo = document.querySelector('.recipeTitleTwo');
-            // let titleTwo = res.meals[1].title;
-            // recipeTitleTwo.append(titleTwo)
-            // // recipe title three
-            // let recipeTitleThree = document.querySelector('.recipeTitleThree');
-            // let titleThree = res.meals[2].title;
-            // recipeTitleThree.append(titleThree)
+            imageOne();
+            //second image
+            function imageTwo() {
+                let imageFormat2 = "." + res.meals[1].imageType
+                let imageTwoID = res.meals[1].id + "-";
+                let imageURL2 = imageLink + imageTwoID + imageSize + imageFormat2;
+                let img = document.createElement("img")
+                img.src = imageURL2
+                let src = document.querySelector('.recipeImgLunch')
+                src.appendChild(img)
+            }
+            imageTwo();
+            //third image
+            function imageThree() {
+                let imageFormat3 = "." + res.meals[2].imageType
+                let imageThreeID = res.meals[2].id + "-";
+                let imageURL3 = imageLink + imageThreeID + imageSize + imageFormat3;
+                let img = document.createElement("img")
+                img.src = imageURL3
+                let src = document.querySelector('.recipeImgDinner')
+                src.appendChild(img)
+            }
+            imageThree();
         },
         dataType: "json",
         error: function () {
@@ -57,7 +87,3 @@ function dailyHttpRequest() {
     });
 }
 dailyHttpRequest();
-// function dataHandler(data) {
-//     console.log(JSON.parse(data));
-// }
-// To get the id, summary and title of the recipe, use: https://api.spoonacular.com/recipes/{{id}}/summary
