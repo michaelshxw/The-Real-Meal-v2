@@ -22,9 +22,10 @@ function nextPrevious(pageNumber) {
     if (pageNumber == 1 && !validateForm()) return false;
     page[currentPage].style.display = "none";
     currentPage = currentPage + pageNumber;
+    console.log(currentPage);
+    console.log(page.length);
     if (currentPage >= page.length) {
         document.getElementById("profileSetup").submit();
-        document.location.replace("/")
         return false;
     }
     showPage(currentPage);

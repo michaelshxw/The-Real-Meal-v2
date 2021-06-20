@@ -5,14 +5,14 @@
     <div class="col" id="rightScreen">
 
         {{!-- page one --}}
-        <form id="profileSetup">
+        <form action="/profile" method="POST" id="profileSetup">
             <div class="page mb-3">
                 {{!-- <label for="profile-name" class="form-label">Name:</label>
                 <input type="name" class="form-control" placeholder="Name" id="profile-name"> --}}
                 {{!-- <label for="profile-email" class="form-label">Email:</label>
                 <input type="email" class="form-control" placeholder="Email Address" id="profile-email"> --}}
                 <label for="profile-dob" class="form-label">Date of Birth:</label>
-                <input type="dateofbirth" class="form-control" placeholder="DD/MM/YYYY" id="profile-dob">
+                <input type="dateofbirth"  class="form-control" placeholder="DD/MM/YYYY" name="DOB" id="profile-dob">
                 {{!-- <label for="profile-password" class="form-label">Password:</label>
                 <input type="password" class="form-control" placeholder="Password" id="profile-password"> --}}
             </div>
@@ -20,11 +20,11 @@
             {{!-- page two --}}
             <div class="page mb-3">
                 <label for="profile-weight" class="form-label">Weight:</label>
-                <input type="name" class="form-control" placeholder="70kgs" id="profile-weight">
+                <input type="name" class="form-control" placeholder="70kgs" id="profile-weight" name="weight">
                 <label for="profile-height" class="form-label">Height:</label>
-                <input type="email" class="form-control" placeholder="170cms" id="profile-height">
-                <label for="profile-weight-goal" class="form-label">Weight Goal</label>
-                <select class="form-select" id="profile-weight-goal">
+                <input type="email" class="form-control" placeholder="170cms" id="profile-height" name="height">
+                <label for="profile-weight-goal" class="form-label" >Weight Goal</label>
+                <select class="form-select" id="profile-weight-goal" name="weightGoal">
                     <option selected>Prefer not to say</option>
                     <option value="1">Lose Weight</option>
                     <option value="2">Maintain Weight</option>
@@ -32,7 +32,7 @@
                 </select>
 
                 <label for="profile-activity-level" class="form-label">Activity Level:</label>
-                <select class="form-select" id="profile-activity-level">
+                <select class="form-select" id="profile-activity-level" name="actLevel">
                     <option selected>Prefer not to say</option>
                     <option value="1">Sedentary</option>
                     <option value="2">Lightly Active</option>
@@ -44,7 +44,7 @@
             {{!-- page three --}}
             <div class="page mb-3">
                 <label for="profile-dietPref" class="form-label">Dietary Preferences:</label>
-                <select class="form-select" id="profile-dietPref">
+                <select class="form-select" id="profile-dietPref" name="dietPref">
                     <option selected>None</option>
                     <option value="1">Gluten Free</option>
                     <option value="2">Vegetarian</option>
@@ -58,7 +58,7 @@
                 </select>
 
                 <label for="profile-allergies" class="form-label">Allergies:</label>
-                <select class="form-select" id="profile-allergies">
+                <select class="form-select" id="profile-allergies" name="allergies">
                     <option selected>None</option>
                     <option value="1">Dairy</option>
                     <option value="2">Eggs</option>
@@ -76,17 +76,17 @@
                 </select>
 
                 <label for="profile-exclude" class="form-label">Foods you'd like to exclude:</label>
-                <input type="text" class="form-control" placeholder="Tomatoes, Spinach, etc." id="profile-exclude">
+                <input type="text" class="form-control" placeholder="Tomatoes, Spinach, etc." id="profile-exclude" name="exclusions">
 
                 <label for="profile-calLimit" class="form-label">Daily Calorie Limit:</label>
-                <input type="text" class="form-control" placeholder="1800 calories" id="profile-calLimit">
+                <input type="text" class="form-control" placeholder="1800 calories" id="profile-calLimit" name="calories">
 
 
                 <br>
 
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                     <label class="btn btn-secondary">
-                        <input type="radio" name="options" id="metric" autocomplete="off" checked> Metric
+                        <input type="radio" name="options" id="metric" autocomplete="off"> Metric
                     </label>
                     <label class="btn btn-secondary active">
                         <input type="radio" name="options" id="us" autocomplete="off"> Imperial
@@ -99,11 +99,11 @@
             <div class="page">
                 <h3>Macronutrients</h3>
                 <label for="profile-macrosCarbs" class="form-label">Carbs (g)</label>
-                <input type="text" class="col-4 form-control" placeholder="50g" id="profile-macrosCarbs">
+                <input type="text" class="col-4 form-control" placeholder="50g" id="profile-macrosCarbs" name="carbs">
                 <label for="profile-macrosFat" class="form-label">Fat (g)</label>
-                <input type="text" class="col-lg-4 form-control" placeholder="20g" id="profile-macrosFat">
+                <input type="text" class="col-lg-4 form-control" placeholder="20g" id="profile-macrosFat" name="fat">
                 <label for="profile-macrosProtein" class="form-label">Protein (g)</label>
-                <input type="text" class="form-control" placeholder="30g" id="profile-macrosProtein">
+                <input type="text" class="form-control" placeholder="30g" id="profile-macrosProtein" name="protein">
             </div>
 
             {{!-- next and previous buttons --}}
@@ -130,7 +130,6 @@
 </div>
 
 <script src="./js/profile.js"></script>
-
 {{!-- REFERENCES --}}
 
 {{!-- How to create a form with multiple steps --}}
