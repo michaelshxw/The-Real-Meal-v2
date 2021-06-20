@@ -1,3 +1,5 @@
+/* MAIN TEMPLATE */
+
 .mainContainer {
     margin-top: 150px !important;
     width: 80% !important;
@@ -19,10 +21,58 @@
     border-bottom-right-radius: 6px;
 }
 
-.successIcon {
-    position: relative;
+h1 {
     text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    position: relative;
+    top: 50px;
+}
+
+nav {
+    position: absolute;
+    top: 150px;
     left: 50%;
-    top: 40%;
-    height: 200px;
+    transform: translate(-50%, -50%);
+}
+
+/* SETUP PROFILE FORM */
+
+#profileSetup {
+    margin: 50px auto;
+    padding: 0px 50px;
+    width: 100%;
+    min-width: 300px;
+}
+  
+input.invalid {
+    background-color: #ffb8b8;
+}
+  
+.page {
+    display: none;
+}
+  
+.pageIndicator {
+    text-align: center;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #7c7c7c;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+  
+.pageIndicator.active {
+    opacity: 1;
+}
+  
+.pageIndicator.finish {
+    background-color: #00ce22;
+}
+
+.pageCounter {
+    margin-top: 30px;
+    text-align: center;
 }

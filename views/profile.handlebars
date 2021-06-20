@@ -1,0 +1,137 @@
+<div class="row">
+    <div class="col" id="leftScreen">
+        <h2>Setup your profile...</h2>
+    </div>
+    <div class="col" id="rightScreen">
+
+        {{!-- page one --}}
+        <form id="profileSetup">
+            <div class="page mb-3">
+                <label for="profile-name" class="form-label">Name:</label>
+                <input type="name" class="form-control" placeholder="Name" id="profile-name">
+                <label for="profile-email" class="form-label">Email:</label>
+                <input type="email" class="form-control" placeholder="Email Address" id="profile-email">
+                <label for="profile-dob" class="form-label">Date of Birth:</label>
+                <input type="dateofbirth" class="form-control" placeholder="DD/MM/YYYY" id="profile-dob">
+                <label for="profile-password" class="form-label">Password:</label>
+                <input type="password" class="form-control" placeholder="Password" id="profile-password">
+            </div>
+
+            {{!-- page two --}}
+            <div class="page mb-3">
+                <label for="profile-weight" class="form-label">Weight:</label>
+                <input type="name" class="form-control" placeholder="70kgs" id="profile-weight">
+                <label for="profile-height" class="form-label">Height:</label>
+                <input type="email" class="form-control" placeholder="170cms" id="profile-height">
+                <label for="profile-weight-goal" class="form-label">Weight Goal</label>
+                <select class="form-select" id="profile-weight-goal">
+                    <option selected>Prefer not to say</option>
+                    <option value="1">Lose Weight</option>
+                    <option value="2">Maintain Weight</option>
+                    <option value="3">Increase Weight</option>
+                </select>
+
+                <label for="profile-activity-level" class="form-label">Activity Level:</label>
+                <select class="form-select" id="profile-activity-level">
+                    <option selected>Prefer not to say</option>
+                    <option value="1">Sedentary</option>
+                    <option value="2">Lightly Active</option>
+                    <option value="3">Moderately Active</option>
+                    <option value="4">Highly Active</option>
+                </select>
+            </div>
+
+            {{!-- page three --}}
+            <div class="page mb-3">
+                <label for="profile-dietPref" class="form-label">Dietary Preferences:</label>
+                <select class="form-select" id="profile-dietPref">
+                    <option selected>None</option>
+                    <option value="1">Gluten Free</option>
+                    <option value="2">Vegetarian</option>
+                    <option value="3">Vegan</option>
+                    <option value="4">Lacto-Vegetarian</option>
+                    <option value="5">Ovo-Vegetarian</option>
+                    <option value="6">Pescetarian</option>
+                    <option value="7">Paleo</option>
+                    <option value="8">Primal</option>
+                    {{!-- <option value="9">Example</option> --}}
+                </select>
+
+                <label for="profile-allergies" class="form-label">Allergies:</label>
+                <select class="form-select" id="profile-allergies">
+                    <option selected>None</option>
+                    <option value="1">Dairy</option>
+                    <option value="2">Eggs</option>
+                    <option value="3">Gluten</option>
+                    <option value="4">Grains</option>
+                    <option value="5">Peanuts</option>
+                    <option value="6">Seafood</option>
+                    <option value="7">Sesame</option>
+                    <option value="8">Shellfish</option>
+                    <option value="9">Soy</option>
+                    <option value="10">Sulfites</option>
+                    <option value="11">Tree Nuts</option>
+                    <option value="12">Wheat</option>
+                    {{!-- <option value="13">Example</option> --}}
+                </select>
+
+                <label for="profile-exclude" class="form-label">Foods you'd like to exclude:</label>
+                <input type="text" class="form-control" placeholder="Tomatoes, Spinach, etc." id="profile-exclude">
+
+                <label for="profile-calLimit" class="form-label">Daily Calorie Limit:</label>
+                <input type="text" class="form-control" placeholder="1800 calories" id="profile-calLimit">
+
+
+                <br>
+
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="metric" autocomplete="off" checked> Metric
+                    </label>
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="options" id="us" autocomplete="off"> Imperial
+                    </label>
+                </div>
+            </div>
+
+            {{!-- page four --}}
+
+            <div class="page">
+                <h3>Macronutrients</h3>
+                <label for="profile-macrosCarbs" class="form-label">Carbs</label>
+                <input type="text" class="col-4 form-control" placeholder="50g" id="profile-macrosCarbs">
+                <label for="profile-macrosFat" class="form-label">Fat</label>
+                <input type="text" class="col-lg-4 form-control" placeholder="20g" id="profile-macrosFat">
+                <label for="profile-macrosProtein" class="form-label">Protein</label>
+                <input type="text" class="form-control" placeholder="30g" id="profile-macrosProtein">
+            </div>
+
+            {{!-- next and previous buttons --}}
+
+            <div style="overflow:auto;">
+                <div style="float:right;">
+                    <button class="btn btn-primary" type="button" id="previousBtn"
+                        onclick="nextPrevious(-1)">Previous</button>
+                    <button class="btn btn-primary" type="button" id="nextBtn" 
+                        onclick="nextPrevious(1)">Next</button>
+                </div>
+            </div>
+
+            {{!-- page counter / indicator --}}
+            <div class="pageCounter">
+                <span class="pageIndicator"></span>
+                <span class="pageIndicator"></span>
+                <span class="pageIndicator"></span>
+                <span class="pageIndicator"></span>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<script src="./js/profile.js"></script>
+
+{{!-- REFERENCES --}}
+
+{{!-- How to create a form with multiple steps --}}
+{{!-- https://www.w3schools.com/howto/howto_js_form_steps.asp --}}

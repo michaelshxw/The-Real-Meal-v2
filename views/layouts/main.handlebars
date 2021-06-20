@@ -10,16 +10,38 @@
     {{!-- Bootstrap CSS Framework --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    {{!-- FontAwesome Framework --}}
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <title>The Real Meal App</title>
 </head>
 
 <body>
-    <div class="mainContainer container">
-        {{{ body }}}
-    </div>
-    <script src="/js/login.js"></script>
+    <header>
+        <h1>The Real Meal</h1>
+    </header>
+    <nav>
+        <a href="/" class="btn btn-warning">Home</a>
+        {{#if loggedIn}}
+        <button id="logout" class="btn btn-warning">Logout</button>
+        {{else}}
+        <a class="btn btn-warning" href="/login">Login</a>
+        {{/if}}
+    </nav>
+    <main>
+        <div class="mainContainer container">
+            {{{body}}}
+        </div>
+    </main>
+
+    {{#if loggedIn}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+
+    {{!-- bootstrap cdn --}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
