@@ -1,3 +1,12 @@
-const User = require('./User');
+const favouriteRecipies = require("./favouriteRecipies");
+const userProfile = require("./userProfile");
+const User = require("./User");
 
-module.exports = { User};
+// define relationships between the tables 
+
+module.exports = 
+{
+    favouriteRecipies, 
+    userProfile,
+    User,
+};
