@@ -1,10 +1,11 @@
-const sequelize = require("../config/connection")
+const sequelize = require("../config/connection");
 const { User } = require("../models/index");
 
 
 const seedDatabase = async () => {
   await sequelize.sync();
 }
+
 
 exports.user_login = async function (req, res) {
   //find user by username
@@ -48,23 +49,48 @@ exports.user_signup = async function (req, res) {
     }).then((arr) => {
       const wasCreated = arr[1] // the second element tells us if the instance was newly created
       if (wasCreated) {
+        setSession(req.session, req.body.email);
         res.send("Signup Success");
       }
       else {
         res.status(500);
-        res.send();
+        res.end();
       }
     }).catch((err) => {
       console.log('There was an error', err.message)
-      res.status(500)
-      res.send();
+      res.status(500);
+      res.end();
     });
 }
 
+exports.user_landing = function checkUser(req,res)
+{
+
+  if (req.session.loggedIn)
+  {
+    res.render("../views/home",{loggedIn: true});
+  }
+  else
+  {
+    res.render("../views/login");
+  }
+  
+}
+
+exports.user_logout = function logOut(req,res)
+{
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.send("ok").end();
+    });
+  } else {
+    res.status(404).end();
+  }
+
+}
+
 function setSession(reqSession, email,) {
-  reqSession.user = {};
-  reqSession.user.email = email;
-  reqSession.user.loggedIn = true;
+  reqSession.loggedIn = true;
   return;
 }
 

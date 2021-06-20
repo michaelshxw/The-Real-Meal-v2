@@ -1,4 +1,4 @@
-const favouriteRecipes = require("./favouriteRecipes");
+const Recipes = require("./Recipe");
 const userProfile = require("./userProfile");
 const User = require("./User");
 
@@ -6,7 +6,7 @@ const User = require("./User");
 
 module.exports = 
 {
-    favouriteRecipes, 
+    Recipes, 
     userProfile,
     User,
 };
