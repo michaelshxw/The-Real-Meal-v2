@@ -13,16 +13,23 @@ let dietPref = "&diet=";
 let userDietPref = "vegetarian";
 let exclude = "&exclude=";
 // let userExclude = userProfile.excludeFoods;
-let userExclude = "tomatoes";
+let userExclude = "butter";
 
 // api request URL 
 const dailyURL = generatePlan + apiKey + dailyPlan + targetCalories + userCalories + dietPref + userDietPref + exclude + userExclude;
 console.log(dailyURL);
 
-$('#genDailyPlan').click(function(){
-    const data = { name}
-})
-
-
+// http request with the dailyURL
+$.ajax({
+    url: dailyURL,
+    type: 'GET',
+    success: function(res) {
+        console.log(res);
+    },
+    dataType: "json",
+    error: function() {
+        alert("Couldn't retrieve daily meal plan. Please try again.");
+    }
+});
 
 // To get the id, summary and title of the recipe, use: https://api.spoonacular.com/recipes/{{id}}/summary
