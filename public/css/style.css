@@ -120,7 +120,7 @@ h3 {
 
 .dailyPlanCards {
     position: relative;
-    margin-top: 80px;
+    margin-top: 10px;
     height: 500px;
 }
 
@@ -130,4 +130,10 @@ h3 {
 
 .planBtns {
     position: relative;
+}
+
+/* WEEKLY MEAL PLAN */
+
+.weeklyplannav {
+    margin-top: 100px;
 }
