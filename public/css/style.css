@@ -27,7 +27,7 @@ body {
 /* MAIN TEMPLATE */
 
 .mainContainer {
-    margin-top: 150px !important;
+    margin-top: 60px !important;
     width: 80% !important;
     filter: drop-shadow(6px 6px 5px rgb(85, 85, 85));
     border-radius: 50px !important;
