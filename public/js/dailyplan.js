@@ -14,7 +14,16 @@ let userDietPref = "vegetarian";
 let exclude = "&exclude=";
 // let userExclude = userProfile.excludeFoods;
 let userExclude = "butter";
+
+
 let currentDaily = [];
+let favourite = {
+    title: "",
+    url: "",
+    img: "",
+    recipeID:""
+};
+
 
 // api request URL 
 const dailyURL = generatePlan + apiKey + dailyPlan + targetCalories + userCalories + dietPref + userDietPref + exclude + userExclude;
@@ -93,15 +102,35 @@ document.querySelectorAll('.fa-heart').forEach(item => {
       console.log("click ", event.target.id);
       switch (event.target.id)
       {
-          case 'one':console.log(currentDaily[0]);
+          case 'one':
+            favourite.receipeID = currentDaily[0].id;
+            favourite.title = currentDaily[0].title;
+            favourite.img = "https://spoonacular.com/recipeImages/" + currentDaily[0].id + ".jpeg";
+            favourite.url  = currentDaily[0].sourceUrl;
           break;
           case 'two':console.log(currentDaily[1]);
+          favourite.receipeID = currentDaily[1].id;
+          favourite.title = currentDaily[1].title;
+          favourite.img = "https://spoonacular.com/recipeImages/" + currentDaily[1].id + ".jpeg";
+          favourite.url  = currentDaily[1].sourceUrl;
           break;
           case 'three':console.log(currentDaily[2]);
+          favourite.receipeID = currentDaily[2].id;
+          favourite.title = currentDaily[2].title;
+          favourite.img = "https://spoonacular.com/recipeImages/" + currentDaily[2].id + ".jpeg";
+          favourite.url  = currentDaily[2].sourceUrl;
           break;
+
       }
-    })
-  });
+        const response = await fetch('/recipes/save', {
+          method: 'POST',
+          body: JSON.stringify(favourite),
+          headers: { 'Content-Type': 'application/json' }
+        });
+    });
+  
+        
+
 
 
 dailyHttpRequest();

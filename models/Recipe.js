@@ -25,6 +25,11 @@ Recipe.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    recipe_id: 
+    {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   },
 
   {
