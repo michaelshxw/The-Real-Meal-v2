@@ -2,7 +2,8 @@
   <div class="col" id="rightScreen">
     <h3>Weekly Meal Plan</h3>
     <div class="d-flex align-items-start">
-      <div class="nav flex-column nav-pills nav-fill me-3 weeklyplannav" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <div class="nav flex-column nav-pills nav-fill me-3 weeklyplannav" id="v-pills-tab" role="tablist"
+        aria-orientation="vertical">
         <button class="nav-link active" id="v-pills-monday-tab" data-bs-toggle="pill" data-bs-target="#v-pills-monday"
           type="button" role="tab" aria-controls="v-pills-monday" aria-selected="true">Monday</button>
         <button class="nav-link" id="v-pills-tuesday-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tuesday"
@@ -18,23 +19,84 @@
         <button class="nav-link" id="v-pills-sunday-tab" data-bs-toggle="pill" data-bs-target="#v-pills-sunday"
           type="button" role="tab" aria-controls="v-pills-sunday" aria-selected="false">Sunday</button>
       </div>
-  
+
       <div class="tab-content" id="v-pills-tabContent">
+
         <div class="tab-pane fade show active" id="v-pills-monday" role="tabpanel" aria-labelledby="v-pills-monday-tab">
+          <div class="row">
+            <div class="col-lg-4">
+
+              <div class="card text-center dailyPlanCards">
+                <div class="card-header">
+                  Breakfast
+                </div>
+                <div class="recipeImgBreakfastMonday"></div>
+                <div class="card-body monday">
+                  <h4 class="card-title recipeTitle"></h4>
+                  <p class="card-text dailyPlanDescription"></p>
+                  <div class="planBtnsMonday">
+                    <a href="#" class="btn btn-danger"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="btn btn-primary">Show Recipe</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-lg-4">
+
+              <div class="card text-center dailyPlanCards">
+                <div class="card-header">
+                  Lunch
+                </div>
+                <div class="recipeImgLunchMonday"></div>
+                <div class="card-body monday">
+                  <h4 class="card-title recipeTitle"></h4>
+                  <p class="card-text dailyPlanDescription"></p>
+                  <div class="planBtnsMonday">
+                    <a href="#" class="btn btn-danger"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="btn btn-primary">Show Recipe</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-lg-4">
+
+              <div class="card text-center dailyPlanCards">
+                <div class="card-header">
+                  Dinner
+                </div>
+                <div class="recipeImgDinnerMonday"></div>
+                <div class="card-body monday">
+                  <h4 class="card-title recipeTitle"></h4>
+                  <p class="card-text dailyPlanDescription"></p>
+                  <div class="planBtnsMonday">
+                    <a href="#" class="btn btn-danger"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="btn btn-primary">Show Recipe</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="tab-pane fade" id="v-pills-tuesday" role="tabpanel" aria-labelledby="v-pills-tuesday-tab">
           <div class="row">
             <div class="col-lg-4">
               <div class="card text-center dailyPlanCards">
                 <div class="card-header">
                   Breakfast
                 </div>
-                <div class="card-body">
-                  <h5 class="card-title" id="recipeTitle">{{monday.recipe-title.[0]}}</h5>
-                  <p class="card-text dailyPlanDescription">Recipe Description: Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit.
-                    Praesentium officiis magnam illum aliquam architecto, aperiam mollitia tenetur provident iure et
-                    placeat
-                    fugiat enim nulla asperiores fuga explicabo rem sed porro?</p>
-                  <a href="#" class="btn btn-primary">Show Me The Recipe</a>
+                <div class="recipeImgBreakfastTuesday"></div>
+                <div class="card-body tuesday">
+                  <h4 class="card-title recipeTitle"></h4>
+                  <p class="card-text dailyPlanDescription"></p>
+                  <div class="planBtnsTuesday">
+                    <a href="#" class="btn btn-danger"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="btn btn-primary">Show Recipe</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -43,14 +105,14 @@
                 <div class="card-header">
                   Lunch
                 </div>
-                <div class="card-body">
-                  <h5 class="card-title">{{monday.recipe-title.[1]}}</h5>
-                  <p class="card-text dailyPlanDescription">Recipe Description: Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit.
-                    Praesentium officiis magnam illum aliquam architecto, aperiam mollitia tenetur provident iure et
-                    placeat
-                    fugiat enim nulla asperiores fuga explicabo rem sed porro?</p>
-                  <a href="#" class="btn btn-primary">Show Me The Recipe</a>
+                <div class="recipeImgLunchTuesday"></div>
+                <div class="card-body tuesday">
+                  <h4 class="card-title recipeTitle"></h4>
+                  <p class="card-text dailyPlanDescription"></p>
+                  <div class="planBtnsTuesday">
+                    <a href="#" class="btn btn-danger"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="btn btn-primary">Show Recipe</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -59,66 +121,14 @@
                 <div class="card-header">
                   Dinner
                 </div>
-                <div class="card-body">
-                  <h5 class="card-title">Recipe Title</h5>
-                  <p class="card-text dailyPlanDescription">Recipe Description: Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit.
-                    Praesentium officiis magnam illum aliquam architecto, aperiam mollitia tenetur provident iure et
-                    placeat
-                    fugiat enim nulla asperiores fuga explicabo rem sed porro?</p>
-                  <a href="#" class="btn btn-primary">Show Me The Recipe</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="tab-pane fade" id="v-pills-tuesday" role="tabpanel" aria-labelledby="v-pills-tuesday-tab">
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="card text-center dailyPlanCards">
-                <div class="card-header">
-                  Recipe One
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title" id="recipeTitle">Recipe Title</h5>
-                  <p class="card-text dailyPlanDescription">Recipe Description: Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit.
-                    Praesentium officiis magnam illum aliquam architecto, aperiam mollitia tenetur provident iure et
-                    placeat
-                    fugiat enim nulla asperiores fuga explicabo rem sed porro?</p>
-                  <a href="#" class="btn btn-primary">Show Me The Recipe</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card text-center dailyPlanCards">
-                <div class="card-header">
-                  Recipe One
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Recipe Title</h5>
-                  <p class="card-text dailyPlanDescription">Recipe Description: Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit.
-                    Praesentium officiis magnam illum aliquam architecto, aperiam mollitia tenetur provident iure et
-                    placeat
-                    fugiat enim nulla asperiores fuga explicabo rem sed porro?</p>
-                  <a href="#" class="btn btn-primary">Show Me The Recipe</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card text-center dailyPlanCards">
-                <div class="card-header">
-                  Recipe One
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Recipe Title</h5>
-                  <p class="card-text dailyPlanDescription">Recipe Description: Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit.
-                    Praesentium officiis magnam illum aliquam architecto, aperiam mollitia tenetur provident iure et
-                    placeat
-                    fugiat enim nulla asperiores fuga explicabo rem sed porro?</p>
-                  <a href="#" class="btn btn-primary">Show Me The Recipe</a>
+                <div class="recipeImgDinnerTuesday"></div>
+                <div class="card-body tuesday">
+                  <h4 class="card-title recipeTitle"></h4>
+                  <p class="card-text dailyPlanDescription"></p>
+                  <div class="planBtnsTuesday">
+                    <a href="#" class="btn btn-danger"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="btn btn-primary">Show Recipe</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -129,48 +139,48 @@
             <div class="col-lg-4">
               <div class="card text-center dailyPlanCards">
                 <div class="card-header">
-                  Recipe One
+                  Breakfast
                 </div>
-                <div class="card-body">
-                  <h5 class="card-title" id="recipeTitle">Recipe Title</h5>
-                  <p class="card-text dailyPlanDescription">Recipe Description: Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit.
-                    Praesentium officiis magnam illum aliquam architecto, aperiam mollitia tenetur provident iure et
-                    placeat
-                    fugiat enim nulla asperiores fuga explicabo rem sed porro?</p>
-                  <a href="#" class="btn btn-primary">Show Me The Recipe</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card text-center dailyPlanCards">
-                <div class="card-header">
-                  Recipe One
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Recipe Title</h5>
-                  <p class="card-text dailyPlanDescription">Recipe Description: Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit.
-                    Praesentium officiis magnam illum aliquam architecto, aperiam mollitia tenetur provident iure et
-                    placeat
-                    fugiat enim nulla asperiores fuga explicabo rem sed porro?</p>
-                  <a href="#" class="btn btn-primary">Show Me The Recipe</a>
+                <div class="recipeImgBreakfastWednesday"></div>
+                <div class="card-body wednesday">
+                  <h4 class="card-title recipeTitle"></h4>
+                  <p class="card-text dailyPlanDescription"></p>
+                  <div class="planBtnsWednesday">
+                    <a href="#" class="btn btn-danger"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="btn btn-primary">Show Recipe</a>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col-lg-4">
               <div class="card text-center dailyPlanCards">
                 <div class="card-header">
-                  Recipe One
+                  Lunch
                 </div>
-                <div class="card-body">
-                  <h5 class="card-title">Recipe Title</h5>
-                  <p class="card-text dailyPlanDescription">Recipe Description: Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit.
-                    Praesentium officiis magnam illum aliquam architecto, aperiam mollitia tenetur provident iure et
-                    placeat
-                    fugiat enim nulla asperiores fuga explicabo rem sed porro?</p>
-                  <a href="#" class="btn btn-primary">Show Me The Recipe</a>
+                <div class="recipeImgLunchWednesday"></div>
+                <div class="card-body wednesday">
+                  <h4 class="card-title recipeTitle"></h4>
+                  <p class="card-text dailyPlanDescription"></p>
+                  <div class="planBtnsWednesday">
+                    <a href="#" class="btn btn-danger"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="btn btn-primary">Show Recipe</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card text-center dailyPlanCards">
+                <div class="card-header">
+                  Dinner
+                </div>
+                <div class="recipeImgDinnerWednesday"></div>
+                <div class="card-body wednesday">
+                  <h4 class="card-title recipeTitle"></h4>
+                  <p class="card-text dailyPlanDescription"></p>
+                  <div class="planBtnsWednesday">
+                    <a href="#" class="btn btn-danger"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="btn btn-primary">Show Recipe</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -181,48 +191,48 @@
             <div class="col-lg-4">
               <div class="card text-center dailyPlanCards">
                 <div class="card-header">
-                  Recipe One
+                  Breakfast
                 </div>
-                <div class="card-body">
-                  <h5 class="card-title" id="recipeTitle">Recipe Title</h5>
-                  <p class="card-text dailyPlanDescription">Recipe Description: Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit.
-                    Praesentium officiis magnam illum aliquam architecto, aperiam mollitia tenetur provident iure et
-                    placeat
-                    fugiat enim nulla asperiores fuga explicabo rem sed porro?</p>
-                  <a href="#" class="btn btn-primary">Show Me The Recipe</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card text-center dailyPlanCards">
-                <div class="card-header">
-                  Recipe One
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Recipe Title</h5>
-                  <p class="card-text dailyPlanDescription">Recipe Description: Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit.
-                    Praesentium officiis magnam illum aliquam architecto, aperiam mollitia tenetur provident iure et
-                    placeat
-                    fugiat enim nulla asperiores fuga explicabo rem sed porro?</p>
-                  <a href="#" class="btn btn-primary">Show Me The Recipe</a>
+                <div class="recipeImgBreakfastThursday"></div>
+                <div class="card-body thursday">
+                  <h4 class="card-title recipeTitle"></h4>
+                  <p class="card-text dailyPlanDescription"></p>
+                  <div class="planBtnsThursday">
+                    <a href="#" class="btn btn-danger"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="btn btn-primary">Show Recipe</a>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col-lg-4">
               <div class="card text-center dailyPlanCards">
                 <div class="card-header">
-                  Recipe One
+                  Lunch
                 </div>
-                <div class="card-body">
-                  <h5 class="card-title">Recipe Title</h5>
-                  <p class="card-text dailyPlanDescription">Recipe Description: Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit.
-                    Praesentium officiis magnam illum aliquam architecto, aperiam mollitia tenetur provident iure et
-                    placeat
-                    fugiat enim nulla asperiores fuga explicabo rem sed porro?</p>
-                  <a href="#" class="btn btn-primary">Show Me The Recipe</a>
+                <div class="recipeImgLunchThursday"></div>
+                <div class="card-body thursday">
+                  <h4 class="card-title recipeTitle"></h4>
+                  <p class="card-text dailyPlanDescription"></p>
+                  <div class="planBtnsThursday">
+                    <a href="#" class="btn btn-danger"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="btn btn-primary">Show Recipe</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card text-center dailyPlanCards">
+                <div class="card-header">
+                  Dinner
+                </div>
+                <div class="recipeImgDinnerThursday"></div>
+                <div class="card-body thursday">
+                  <h4 class="card-title recipeTitle"></h4>
+                  <p class="card-text dailyPlanDescription"></p>
+                  <div class="planBtnsThursday">
+                    <a href="#" class="btn btn-danger"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="btn btn-primary">Show Recipe</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -233,48 +243,48 @@
             <div class="col-lg-4">
               <div class="card text-center dailyPlanCards">
                 <div class="card-header">
-                  Recipe One
+                  Breakfast
                 </div>
-                <div class="card-body">
-                  <h5 class="card-title" id="recipeTitle">Recipe Title</h5>
-                  <p class="card-text dailyPlanDescription">Recipe Description: Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit.
-                    Praesentium officiis magnam illum aliquam architecto, aperiam mollitia tenetur provident iure et
-                    placeat
-                    fugiat enim nulla asperiores fuga explicabo rem sed porro?</p>
-                  <a href="#" class="btn btn-primary">Show Me The Recipe</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card text-center dailyPlanCards">
-                <div class="card-header">
-                  Recipe One
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Recipe Title</h5>
-                  <p class="card-text dailyPlanDescription">Recipe Description: Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit.
-                    Praesentium officiis magnam illum aliquam architecto, aperiam mollitia tenetur provident iure et
-                    placeat
-                    fugiat enim nulla asperiores fuga explicabo rem sed porro?</p>
-                  <a href="#" class="btn btn-primary">Show Me The Recipe</a>
+                <div class="recipeImgBreakfastFriday"></div>
+                <div class="card-body friday">
+                  <h4 class="card-title recipeTitle"></h4>
+                  <p class="card-text dailyPlanDescription"></p>
+                  <div class="planBtnsFriday">
+                    <a href="#" class="btn btn-danger"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="btn btn-primary">Show Recipe</a>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col-lg-4">
               <div class="card text-center dailyPlanCards">
                 <div class="card-header">
-                  Recipe One
+                  Lunch
                 </div>
-                <div class="card-body">
-                  <h5 class="card-title">Recipe Title</h5>
-                  <p class="card-text dailyPlanDescription">Recipe Description: Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit.
-                    Praesentium officiis magnam illum aliquam architecto, aperiam mollitia tenetur provident iure et
-                    placeat
-                    fugiat enim nulla asperiores fuga explicabo rem sed porro?</p>
-                  <a href="#" class="btn btn-primary">Show Me The Recipe</a>
+                <div class="recipeImgLunchFriday"></div>
+                <div class="card-body friday">
+                  <h4 class="card-title recipeTitle"></h4>
+                  <p class="card-text dailyPlanDescription"></p>
+                  <div class="planBtnsFriday">
+                    <a href="#" class="btn btn-danger"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="btn btn-primary">Show Recipe</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card text-center dailyPlanCards">
+                <div class="card-header">
+                  Dinner
+                </div>
+                <div class="recipeImgDinnerFriday"></div>
+                <div class="card-body friday">
+                  <h4 class="card-title recipeTitle"></h4>
+                  <p class="card-text dailyPlanDescription"></p>
+                  <div class="planBtnsFriday">
+                    <a href="#" class="btn btn-danger"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="btn btn-primary">Show Recipe</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -285,48 +295,48 @@
             <div class="col-lg-4">
               <div class="card text-center dailyPlanCards">
                 <div class="card-header">
-                  Recipe One
+                  Breakfast
                 </div>
-                <div class="card-body">
-                  <h5 class="card-title" id="recipeTitle">Recipe Title</h5>
-                  <p class="card-text dailyPlanDescription">Recipe Description: Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit.
-                    Praesentium officiis magnam illum aliquam architecto, aperiam mollitia tenetur provident iure et
-                    placeat
-                    fugiat enim nulla asperiores fuga explicabo rem sed porro?</p>
-                  <a href="#" class="btn btn-primary">Show Me The Recipe</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card text-center dailyPlanCards">
-                <div class="card-header">
-                  Recipe One
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Recipe Title</h5>
-                  <p class="card-text dailyPlanDescription">Recipe Description: Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit.
-                    Praesentium officiis magnam illum aliquam architecto, aperiam mollitia tenetur provident iure et
-                    placeat
-                    fugiat enim nulla asperiores fuga explicabo rem sed porro?</p>
-                  <a href="#" class="btn btn-primary">Show Me The Recipe</a>
+                <div class="recipeImgBreakfastSaturday"></div>
+                <div class="card-body saturday">
+                  <h4 class="card-title recipeTitle"></h4>
+                  <p class="card-text dailyPlanDescription"></p>
+                  <div class="planBtnsSaturday">
+                    <a href="#" class="btn btn-danger"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="btn btn-primary">Show Recipe</a>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col-lg-4">
               <div class="card text-center dailyPlanCards">
                 <div class="card-header">
-                  Recipe One
+                  Lunch
                 </div>
-                <div class="card-body">
-                  <h5 class="card-title">Recipe Title</h5>
-                  <p class="card-text dailyPlanDescription">Recipe Description: Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit.
-                    Praesentium officiis magnam illum aliquam architecto, aperiam mollitia tenetur provident iure et
-                    placeat
-                    fugiat enim nulla asperiores fuga explicabo rem sed porro?</p>
-                  <a href="#" class="btn btn-primary">Show Me The Recipe</a>
+                <div class="recipeImgLunchSaturday"></div>
+                <div class="card-body saturday">
+                  <h4 class="card-title recipeTitle"></h4>
+                  <p class="card-text dailyPlanDescription"></p>
+                  <div class="planBtnsSaturday">
+                    <a href="#" class="btn btn-danger"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="btn btn-primary">Show Recipe</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card text-center dailyPlanCards">
+                <div class="card-header">
+                  Dinner
+                </div>
+                <div class="recipeImgDinnerSaturday"></div>
+                <div class="card-body saturday">
+                  <h4 class="card-title recipeTitle"></h4>
+                  <p class="card-text dailyPlanDescription"></p>
+                  <div class="planBtnsSaturday">
+                    <a href="#" class="btn btn-danger"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="btn btn-primary">Show Recipe</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -337,48 +347,48 @@
             <div class="col-lg-4">
               <div class="card text-center dailyPlanCards">
                 <div class="card-header">
-                  Recipe One
+                  Breakfast
                 </div>
-                <div class="card-body">
-                  <h5 class="card-title" id="recipeTitle">Recipe Title</h5>
-                  <p class="card-text dailyPlanDescription">Recipe Description: Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit.
-                    Praesentium officiis magnam illum aliquam architecto, aperiam mollitia tenetur provident iure et
-                    placeat
-                    fugiat enim nulla asperiores fuga explicabo rem sed porro?</p>
-                  <a href="#" class="btn btn-primary">Show Me The Recipe</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card text-center dailyPlanCards">
-                <div class="card-header">
-                  Recipe One
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Recipe Title</h5>
-                  <p class="card-text dailyPlanDescription">Recipe Description: Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit.
-                    Praesentium officiis magnam illum aliquam architecto, aperiam mollitia tenetur provident iure et
-                    placeat
-                    fugiat enim nulla asperiores fuga explicabo rem sed porro?</p>
-                  <a href="#" class="btn btn-primary">Show Me The Recipe</a>
+                <div class="recipeImgBreakfastSunday"></div>
+                <div class="card-body sunday">
+                  <h4 class="card-title recipeTitle"></h4>
+                  <p class="card-text dailyPlanDescription"></p>
+                  <div class="planBtnsSunday">
+                    <a href="#" class="btn btn-danger"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="btn btn-primary">Show Recipe</a>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col-lg-4">
               <div class="card text-center dailyPlanCards">
                 <div class="card-header">
-                  Recipe One
+                  Lunch
                 </div>
-                <div class="card-body">
-                  <h5 class="card-title">Recipe Title</h5>
-                  <p class="card-text dailyPlanDescription">Recipe Description: Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit.
-                    Praesentium officiis magnam illum aliquam architecto, aperiam mollitia tenetur provident iure et
-                    placeat
-                    fugiat enim nulla asperiores fuga explicabo rem sed porro?</p>
-                  <a href="#" class="btn btn-primary">Show Me The Recipe</a>
+                <div class="recipeImgLunchSunday"></div>
+                <div class="card-body sunday">
+                  <h4 class="card-title recipeTitle"></h4>
+                  <p class="card-text dailyPlanDescription"></p>
+                  <div class="planBtnsSunday">
+                    <a href="#" class="btn btn-danger"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="btn btn-primary">Show Recipe</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card text-center dailyPlanCards">
+                <div class="card-header">
+                  Dinner
+                </div>
+                <div class="recipeImgDinnerSunday"></div>
+                <div class="card-body sunday">
+                  <h4 class="card-title recipeTitle"></h4>
+                  <p class="card-text dailyPlanDescription"></p>
+                  <div class="planBtnsSunday">
+                    <a href="#" class="btn btn-danger"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="btn btn-primary">Show Recipe</a>
+                  </div>
                 </div>
               </div>
             </div>

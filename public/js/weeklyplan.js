@@ -23,6 +23,7 @@ function weeklyHttpRequestMonday() {
         url: weeklyURL,
         type: 'GET',
         success: function (res) {
+            console.log(res);
             let cardBody = document.getElementsByClassName('monday')
             let cardBodyChildren;
             // append recipe titles
