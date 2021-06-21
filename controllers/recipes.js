@@ -1,4 +1,4 @@
-//const { Profile } = require("../models/index");
+const { Recipes } = require("../models/index");
 
 exports.recipe_daily = async function (req, res) {
 
@@ -24,7 +24,16 @@ exports.recipe_weekly = async function (req, res) {
     }
 }
 
+exports.recipe_save = async function (req, res) {
 
+    if(req.session.loggedIn == true)
+    {
+            await Recipes.create({
+            title: req.body.title,
+            recipeImage:req.body.image,
+            recipeURL:req.body.url,
+        });
+    }
 exports.recipe_favorites = async function (req, res) {
 
     if(req.session.loggedIn == true)
