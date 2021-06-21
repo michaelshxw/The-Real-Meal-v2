@@ -1,4 +1,4 @@
-const Recipes = require("./Recipe");
+const Recipe = require("./Recipe");
 const Profile = require("./Profile");
 const User = require("./User");
 
@@ -6,7 +6,7 @@ const User = require("./User");
 
 module.exports = 
 {
-    Recipes, 
+    Recipe, 
     Profile,
     User,
 };

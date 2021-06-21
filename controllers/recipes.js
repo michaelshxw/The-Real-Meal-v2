@@ -1,4 +1,4 @@
-const { Recipes } = require("../models/index");
+const { Recipe } = require("../models/index");
 
 exports.recipe_daily = async function (req, res) {
 
@@ -25,16 +25,16 @@ exports.recipe_weekly = async function (req, res) {
 }
 
 exports.recipe_save = async function (req, res) {
-
+    console.log(req);
     if(req.session.loggedIn == true)
     {
-        console.log(req.body);
-            await Recipes.create({
-            title: req.body.favourite.title,
-            recipeImage:req.body.favourite.image,
-            recipeURL:req.body.favourite.url,
-            recipe_id: req.body.favourite.recipeID
-        });
+            await Recipe.create(
+            {
+            title:req.body.title,
+            image:req.body.img,
+            url:req.body.url,
+            recipe_id:req.body.recipeID,
+            });
     }
 }
 exports.recipe_favorites = async function (req, res) {
