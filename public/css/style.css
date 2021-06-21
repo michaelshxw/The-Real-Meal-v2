@@ -1,3 +1,29 @@
+/*  IMPORTS */
+
+@font-face {
+    font-family: 'bastian';
+    src: url(../fonts/Bastian.ttf);
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url(../fonts/Roboto.ttf);
+}
+
+@font-face {
+    font-family: 'avocado';
+    src: url(../fonts/avocado.ttf);
+}
+
+/* BODY */
+
+body {
+    background-image: url("../images/leaf.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 /* MAIN TEMPLATE */
 
 .mainContainer {
@@ -9,7 +35,7 @@
 
 #leftScreen {
     height: 65vh;
-    background-color: #8fe3b8;
+    background-color: cadetblue;    
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
 }
@@ -23,17 +49,72 @@
 
 h1 {
     text-align: center;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 25px;
+    color: black;
+    font-family: 'bastian';
+    font-size: 100px !important;
     position: relative;
     top: 50px;
 }
 
+h2 {
+    text-align: center;
+    font-family: 'roboto';
+    font-size: 40px !important;
+    position: relative;
+    top: 120px;
+}
+
+.signuptext {
+    position: relative;
+    margin-top: 150px;
+    text-align: center;
+}
+
 nav {
     position: absolute;
-    top: 150px;
+    top: 200px;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.nav-link {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+button {
+    color: black !important;
+	text-transform: uppercase !important;
+	background: #b0e455 !important;
+	padding: 10px 20px !important;
+}
+
+button:hover {
+    background: #434343;
+	-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+	-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+	box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+	transition: all 0.4s ease 0s;
+}
+
+.loginBtn {
+    color: black !important;
+	text-transform: uppercase !important;
+	background: #b0e455 !important;
+	padding: 10px 20px !important;
+}
+
+.loginBtn:hover {
+    background: #434343;
+	-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+	-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+	box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+	transition: all 0.4s ease 0s;
+}
+
+.login-form {
+    position: relative;
+    top: 212px;
 }
 
 /* SETUP PROFILE FORM */
@@ -80,15 +161,25 @@ input.invalid {
 /* HOME SCREEN */
 
 h3 {
+    font-family: 'roboto';
+    font-size: 40px !important;
     text-align: center;
     padding-top: 50px;
     position: relative;
 }
 
 .homeCards {
+    background-color: #b0e455;
+    font-family: 'avocado';
+    font-size: 500px !important;
     position: relative;
     top: 50px;
     padding: 60px 0px;
+}
+
+h5 {
+    font-size: 30px !important;
+
 }
 
 .secondRow {
@@ -118,7 +209,12 @@ h3 {
 
 /* DAILY MEAL PLAN */
 
+.homeScreen {
+    background-color: white !important;
+}
+
 .dailyPlanCards {
+    background-color: #b0e455 !important;
     position: relative;
     margin-top: 10px;
     height: 500px;
@@ -135,5 +231,5 @@ h3 {
 /* WEEKLY MEAL PLAN */
 
 .weeklyplannav {
-    margin-top: 100px;
+    margin-top: 50px;
 }
