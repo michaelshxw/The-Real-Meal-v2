@@ -37,6 +37,7 @@ exports.recipe_save = async function (req, res) {
             });
     }
 }
+
 exports.recipe_favorites = async function (req, res) {
 
     if(req.session.loggedIn == true)
