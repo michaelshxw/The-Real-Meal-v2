@@ -96,12 +96,13 @@ function dailyHttpRequest() {
     });
 }
 
-document.querySelectorAll('.fa-heart').forEach(item => {
-
-    item.addEventListener('click', (event) => {
-      console.log("click ", event.target.id);
+document.querySelectorAll('.fa-heart').forEach(item => 
+{
+    item.addEventListener('click', async (event) => 
+    {
+      console.log(currentDaily);
       switch (event.target.id)
-      {
+        {
           case 'one':
             favourite.receipeID = currentDaily[0].id;
             favourite.title = currentDaily[0].title;
@@ -115,22 +116,12 @@ document.querySelectorAll('.fa-heart').forEach(item => {
           favourite.url  = currentDaily[1].sourceUrl;
           break;
           case 'three':console.log(currentDaily[2]);
-          favourite.receipeID = currentDaily[2].id;
+          favourite.recipeID = currentDaily[2].id;
           favourite.title = currentDaily[2].title;
           favourite.img = "https://spoonacular.com/recipeImages/" + currentDaily[2].id + ".jpeg";
           favourite.url  = currentDaily[2].sourceUrl;
           break;
-
-      }
-        const response = await fetch('/recipes/save', {
-          method: 'POST',
-          body: JSON.stringify(favourite),
-          headers: { 'Content-Type': 'application/json' }
-        });
+        }
     });
-  
-        
-
-
-
+});
 dailyHttpRequest();

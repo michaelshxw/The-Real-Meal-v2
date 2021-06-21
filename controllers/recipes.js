@@ -28,10 +28,12 @@ exports.recipe_save = async function (req, res) {
 
     if(req.session.loggedIn == true)
     {
+        console.log(req.body);
             await Recipes.create({
-            title: req.body.title,
-            recipeImage:req.body.image,
-            recipeURL:req.body.url,
+            title: req.body.favourite.title,
+            recipeImage:req.body.favourite.image,
+            recipeURL:req.body.favourite.url,
+            recipe_id: req.body.favourite.recipeID
         });
     }
 }
