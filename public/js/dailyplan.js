@@ -14,11 +14,11 @@ let userDietPref = "vegetarian";
 let exclude = "&exclude=";
 // let userExclude = userProfile.excludeFoods;
 let userExclude = "butter";
+let currentDaily = [];
 
 // api request URL 
 const dailyURL = generatePlan + apiKey + dailyPlan + targetCalories + userCalories + dietPref + userDietPref + exclude + userExclude;
 console.log(dailyURL);
-
 
 // http request with the dailyURL
 function dailyHttpRequest() {
@@ -29,7 +29,7 @@ function dailyHttpRequest() {
             let cardBody = document.getElementsByClassName('card-body')
             let cardBodyChildren;
             // append recipe titles
-            console.log(res.meals);
+            currentDaily = res.meals;
             for (let i = 0; i < cardBody.length; i++) {
                 cardBodyChildren = cardBody[i].children;
                 cardBodyChildren[0].textContent = res.meals[i].title;
@@ -86,4 +86,22 @@ function dailyHttpRequest() {
         },
     });
 }
+
+document.querySelectorAll('.fa-heart').forEach(item => {
+
+    item.addEventListener('click', (event) => {
+      console.log("click ", event.target.id);
+      switch (event.target.id)
+      {
+          case 'one':console.log(currentDaily[0]);
+          break;
+          case 'two':console.log(currentDaily[1]);
+          break;
+          case 'three':console.log(currentDaily[2]);
+          break;
+      }
+    })
+  });
+
+
 dailyHttpRequest();

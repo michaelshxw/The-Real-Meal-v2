@@ -34,6 +34,7 @@ exports.recipe_save = async function (req, res) {
             recipeURL:req.body.url,
         });
     }
+}
 exports.recipe_favorites = async function (req, res) {
 
     if(req.session.loggedIn == true)
