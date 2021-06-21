@@ -34,7 +34,7 @@ body {
 }
 
 #leftScreen {
-    height: 65vh;
+    height: 75vh;
     background-color: cadetblue;    
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
@@ -42,7 +42,7 @@ body {
 
 #rightScreen {
     background: white;
-    height: 65vh;
+    height: 75vh;
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
 }
