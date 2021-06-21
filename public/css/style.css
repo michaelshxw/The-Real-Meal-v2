@@ -115,14 +115,34 @@ button:hover {
 .login-form {
     position: relative;
     top: 212px;
+    margin:  auto;
+    padding: 0px 50px;
+    width: 80%;
+    min-width: 300px;
+}
+
+.signup-form {
+    position: relative;
+    top: 0px;
+    margin:  auto;
+    padding: 0px 50px;
+    width: 80%;
+    min-width: 300px;
 }
 
 /* SETUP PROFILE FORM */
 
+.profile-header {
+    position: relative;
+    margin-top: 150px;
+}
+
 #profileSetup {
+    position: relative;
+    top: 50px;
     margin: 50px auto;
     padding: 0px 50px;
-    width: 100%;
+    width: 80%;
     min-width: 300px;
 }
   
