@@ -4,9 +4,17 @@ const User = require("./User");
 
 // define relationships between tables 
 
-module.exports = 
+Profile.belongsTo(User, {
+    foreignKey: "user_id",
+})
+
+Recipe.belongsToMany(User, {
+    foreignKey: ""
+});
+
+module.exports =
 {
-    Recipe, 
+    Recipe,
     Profile,
     User,
 };
