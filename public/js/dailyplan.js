@@ -15,10 +15,19 @@ let exclude = "&exclude=";
 // let userExclude = userProfile.excludeFoods;
 let userExclude = "butter";
 
+
+let currentDaily = [];
+let favourite = {
+    title: "",
+    url: "",
+    img: "",
+    recipeID:""
+};
+
+
 // api request URL 
 const dailyURL = generatePlan + apiKey + dailyPlan + targetCalories + userCalories + dietPref + userDietPref + exclude + userExclude;
 console.log(dailyURL);
-
 
 // http request with the dailyURL
 function dailyHttpRequest() {
@@ -29,7 +38,7 @@ function dailyHttpRequest() {
             let cardBody = document.getElementsByClassName('card-body')
             let cardBodyChildren;
             // append recipe titles
-            console.log(res.meals);
+            currentDaily = res.meals;
             for (let i = 0; i < cardBody.length; i++) {
                 cardBodyChildren = cardBody[i].children;
                 cardBodyChildren[0].textContent = res.meals[i].title;
@@ -86,4 +95,33 @@ function dailyHttpRequest() {
         },
     });
 }
+
+document.querySelectorAll('.fa-heart').forEach(item => 
+{
+    item.addEventListener('click', async (event) => 
+    {
+      console.log(currentDaily);
+      switch (event.target.id)
+        {
+          case 'one':
+            favourite.receipeID = currentDaily[0].id;
+            favourite.title = currentDaily[0].title;
+            favourite.img = "https://spoonacular.com/recipeImages/" + currentDaily[0].id + ".jpeg";
+            favourite.url  = currentDaily[0].sourceUrl;
+          break;
+          case 'two':console.log(currentDaily[1]);
+          favourite.receipeID = currentDaily[1].id;
+          favourite.title = currentDaily[1].title;
+          favourite.img = "https://spoonacular.com/recipeImages/" + currentDaily[1].id + ".jpeg";
+          favourite.url  = currentDaily[1].sourceUrl;
+          break;
+          case 'three':console.log(currentDaily[2]);
+          favourite.recipeID = currentDaily[2].id;
+          favourite.title = currentDaily[2].title;
+          favourite.img = "https://spoonacular.com/recipeImages/" + currentDaily[2].id + ".jpeg";
+          favourite.url  = currentDaily[2].sourceUrl;
+          break;
+        }
+    });
+});
 dailyHttpRequest();

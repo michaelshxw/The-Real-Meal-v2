@@ -1,5 +1,5 @@
 const { Profile } = require("../models/index");
-const sequelize = require("../config/connection");
+
 
 exports.profile_goto = async function (req, res) {
 
@@ -32,6 +32,8 @@ exports.profile_save = async function (req, res) {
             fat:req.body.fat,
             protein:req.body.protein,
         });
+
+        res.redirect("/home");
     }
     else
     {
