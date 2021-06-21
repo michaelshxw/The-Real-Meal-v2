@@ -43,7 +43,7 @@ app.use('/profile',profile); //middleware to run home on request to /profile
     sequelize.authenticate()//auth to db
     .then(() =>
     {
-      sequelize.sync({ force: true });
+      sequelize.sync({ force: false });
       console.log("Database connected")
     })
     .catch((err) => {console.log("error", err)});
