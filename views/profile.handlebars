@@ -12,7 +12,7 @@
                 {{!-- <label for="profile-email" class="form-label">Email:</label>
                 <input type="email" class="form-control" placeholder="Email Address" id="profile-email"> --}}
                 <label for="profile-dob" class="form-label">Date of Birth:</label>
-                <input type="dateofbirth"  class="form-control" placeholder="DD/MM/YYYY" name="DOB" id="profile-dob">
+                <input type="dateofbirth" class="form-control" placeholder="DD/MM/YYYY" name="DOB" id="profile-dob">
                 {{!-- <label for="profile-password" class="form-label">Password:</label>
                 <input type="password" class="form-control" placeholder="Password" id="profile-password"> --}}
             </div>
@@ -23,7 +23,7 @@
                 <input type="name" class="form-control" placeholder="70kgs" id="profile-weight" name="weight">
                 <label for="profile-height" class="form-label">Height:</label>
                 <input type="email" class="form-control" placeholder="170cms" id="profile-height" name="height">
-                <label for="profile-weight-goal" class="form-label" >Weight Goal</label>
+                <label for="profile-weight-goal" class="form-label">Weight Goal</label>
                 <select class="form-select" id="profile-weight-goal" name="weightGoal">
                     <option selected>Prefer not to say</option>
                     <option value="1">Lose Weight</option>
@@ -76,10 +76,12 @@
                 </select>
 
                 <label for="profile-exclude" class="form-label">Foods you'd like to exclude:</label>
-                <input type="text" class="form-control" placeholder="Tomatoes, Spinach, etc." id="profile-exclude" name="exclusions">
+                <input type="text" class="form-control" placeholder="Tomatoes, Spinach, etc." id="profile-exclude"
+                    name="exclusions">
 
                 <label for="profile-calLimit" class="form-label">Daily Calorie Limit:</label>
-                <input type="text" class="form-control" placeholder="1800 calories" id="profile-calLimit" name="calories">
+                <input type="text" class="form-control" placeholder="1800 calories" id="profile-calLimit"
+                    name="calories">
 
 
                 <br>
@@ -107,13 +109,12 @@
             </div>
 
             {{!-- next and previous buttons --}}
-
+            <br>
             <div style="overflow:auto;">
                 <div style="float:right;">
-                    <button class="btn btn-primary" type="button" id="previousBtn"
+                    <button class="btn btn-light" type="button" id="previousBtn"
                         onclick="nextPrevious(-1)">Previous</button>
-                    <button class="btn btn-primary" type="button" id="nextBtn" 
-                        onclick="nextPrevious(1)">Next</button>
+                    <button class="btn btn-light" type="button" id="nextBtn" onclick="nextPrevious(1)">Next</button>
                 </div>
             </div>
 
