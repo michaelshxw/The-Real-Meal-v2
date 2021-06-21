@@ -233,3 +233,12 @@ h5 {
 .weeklyplannav {
     margin-top: 50px;
 }
+
+/* FAVOURITES */
+
+.favCards {
+    background-color: #b0e455 !important;
+    position: relative;
+    margin-top: 10px;
+    height: 250px;
+}
