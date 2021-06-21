@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 // declare variables 
 let generatePlan = "https://api.spoonacular.com/mealplanner/generate";
 let apiKey = "?apiKey=4b2eba9b9022436d93402d88effe7013";

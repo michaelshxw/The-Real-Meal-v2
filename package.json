@@ -29,6 +29,7 @@
     "jquery": "^3.6.0",
     "mysql2": "^2.2.5",
     "path": "^0.12.7",
+    "requirejs": "^2.3.6",
     "sequelize": "^6.6.2",
     "vue-uuid": "^2.0.2"
   },
