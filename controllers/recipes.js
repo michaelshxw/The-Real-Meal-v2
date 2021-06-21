@@ -42,8 +42,10 @@ exports.recipe_load = async function (req, res) {
 
         if(req.session.loggedIn == true)
         {
+            res.render("../views/favourites");
+        }
                //find user by username
-  await Recipe.findOne(
+ /* await Recipe.findOne(
     {
       where:
       {
@@ -60,7 +62,7 @@ exports.recipe_load = async function (req, res) {
           return //user faves
       }
     });
-}
+}*/
 }
 
 
