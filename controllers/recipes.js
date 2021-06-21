@@ -38,15 +38,29 @@ exports.recipe_save = async function (req, res) {
     }
 }
 
-exports.recipe_favorites = async function (req, res) {
+exports.recipe_load = async function (req, res) {
 
-    if(req.session.loggedIn == true)
+        if(req.session.loggedIn == true)
+        {
+               //find user by username
+  await Recipe.findOne(
     {
-        res.render("../views/favourites",{loggedIn: true});
-    }
-    else
-    {
-        res.render("../views/login");
-    }
+      where:
+      {
+        
+      }
+
+    }).then((recipe) =>
+     {
+      if (recipe === null) {
+        res.status(500);
+      }
+      else
+      {
+          return //user faves
+      }
+    });
 }
+}
+
 
