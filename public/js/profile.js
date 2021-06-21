@@ -26,6 +26,7 @@ function nextPrevious(pageNumber) {
     console.log(page.length);
     if (currentPage >= page.length) {
         document.getElementById("profileSetup").submit();
+        document.location.replace('/')
         return false;
     }
     showPage(currentPage);

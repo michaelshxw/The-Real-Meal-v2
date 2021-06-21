@@ -1,4 +1,3 @@
-require('dotenv').config();
 
 // declare variables 
 let generatePlan = "https://api.spoonacular.com/mealplanner/generate";
