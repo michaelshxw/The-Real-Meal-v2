@@ -13,6 +13,7 @@ Visit us live at [Heroku](https://realmealplanning.herokuapp.com/).
 * [Usage](#usage)
 * [Contributions](#contributions)
 * [Tests](#tests)
+* [Technologies](#technologies)
 * [License](#license)
 * [Credits](#credits)
 * [Questions](#questions)
