@@ -1,4 +1,3 @@
-
 // declare variables 
 let generatePlan = "https://api.spoonacular.com/mealplanner/generate";
 let apiKey = "?apiKey=4b2eba9b9022436d93402d88effe7013";
@@ -8,10 +7,10 @@ let targetCalories = "&targetCalories="
 let userCalories = "1800"; // until we have the actual object, hard coded
 let dietPref = "&diet=";
 // let userDietPref = userProfile.dietaryPreference;
-let userDietPref = "vegetarian";
+let userDietPref = "vegetarian"; // until we have the actual object, hard coded
 let exclude = "&exclude=";
 // let userExclude = userProfile.excludeFoods;
-let userExclude = "butter";
+let userExclude = "butter"; // until we have the actual object, hard coded
 
 // api request URL 
 const weeklyURL = generatePlan + apiKey + weeklyPlan + targetCalories + userCalories + dietPref + userDietPref + exclude + userExclude;
