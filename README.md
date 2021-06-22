@@ -15,7 +15,6 @@ Visit us live at [Heroku](https://realmealplanning.herokuapp.com/).
 * [Tests](#tests)
 * [Technologies](#technologies)
 * [License](#license)
-* [Credits](#credits)
 * [Questions](#questions)
 
 ## Installation 
