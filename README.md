@@ -55,15 +55,7 @@ This project is licensed with the MIT license.
 
 ## Questions
 
-GitHub username: 
-
-[michaelshxw](http://www.github.com/michaelshxw)
-
-[operationBrass](http://www.github.com/operationBrass)
-
-[Miguel-TheThird](http://www.github.com/Miguel-TheThird)
-
-For any questions or queries, please email Michael here: [michaelshxw@gmail.com](mailto:michaelshxw@gmail.com)
+This application was designed and created by [Michael](http://www.github.com/michaelshxw), [Brendan](http://www.github.com/operationBrass) and [Miguel](http://www.github.com/Miguel-TheThird). For any questions or queries, please email Michael here: [michaelshxw@gmail.com](mailto:michaelshxw@gmail.com)
 
 ![](./assets/screenshots/realmealweeklyplan.png)
 
