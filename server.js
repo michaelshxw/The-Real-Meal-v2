@@ -45,7 +45,7 @@ app.use('/profile',profile); //middleware to run home on request to /profile
     {
       sequelize.sync({ force: false });
     })
-    .catch((err) => {console.log("error", err)});
+    .catch((err) => {console.log("Error: ", err)});
   })
  
 
