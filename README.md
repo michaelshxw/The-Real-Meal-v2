@@ -21,7 +21,7 @@ Visit us live at Heroku.
 
 To use this application locally, ensure that you have NODE.js and MySQL installed on your machine. Clone the files from GitHub. Once this has finished, open the directory and run ```npm install``` to install all dependencies. You will require an API key for Spoonacular, you can get one here free of charge: [here](#https://spoonacular.com/). Store this API key in a ```.env``` file in the main directory, along with your MySQL username, database name, and password (environment variables are pre-labelled in a .env.SAMPLE file in the main directory). 
 
-Alternatively, you can use this application through [Heroku](#https://realmealplanning.herokuapp.com/).
+Alternatively, you can use this application through ![Heroku](https://realmealplanning.herokuapp.com/).
 
 ## Usage
 
