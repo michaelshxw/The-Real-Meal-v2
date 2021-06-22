@@ -19,13 +19,13 @@ Visit us live at Heroku.
 
 ## Installation 
 
-To use this application locally, ensure that you have NODE.js and MySQL installed on your machine. Clone the files from GitHub. Once this has finished, open the directory and run ```npm install``` to ainsall all dependencies. Your will require an API key for Spoonacular, you can get one here free of charge: here. Store this API key in a .env file in the main directory, along with your MySQL username, database name, and password (environment variables are pre-labelled in a .env.SAMPLE file in the main directory). 
+To use this application locally, ensure that you have NODE.js and MySQL installed on your machine. Clone the files from GitHub. Once this has finished, open the directory and run ```npm install``` to install all dependencies. You will require an API key for Spoonacular, you can get one here free of charge: [here](#https://spoonacular.com/). Store this API key in a ```.env``` file in the main directory, along with your MySQL username, database name, and password (environment variables are pre-labelled in a .env.SAMPLE file in the main directory). 
 
-Alternatively, you can use this application through Heroku.
+Alternatively, you can use this application through [Heroku](#https://realmealplanning.herokuapp.com/).
 
 ## Usage
 
-Once you've created an account, accessing The Real Meal is a breeze. you can:
+Once you've created an account, using The Real Meal is a breeze. you can:
 
 * Create a profile and save your information.
 * Create meal plans by day or week. 
@@ -39,15 +39,31 @@ Contributions are more than welcome. All contributions will need to be clearly d
 
 Testing was not implemented in this application.
 
-## License
+## Technologies
 
+* Node.js, Express, MySQL and Sequelize.
+* Handlebars
+* jQuery
+* Bootstrap
+* dotenv
+* Spoonacular API
+* Bcrypt
+
+## License
+t
 This project is licensed with the MIT license.
 
 ## Questions
 
 GitHub username: 
+
 [michaelshxw](http://www.github.com/michaelshxw)
+
 [operationBrass](http://www.github.com/operationBrass)
+
 [Miguel-TheThird](http://www.github.com/Miguel-TheThird)
 
 For any questions or queries, please email Michael here: [michaelshxw@gmail.com](mailto:michaelshxw@gmail.com)
+
+![](./assets/screenshots/realmealweeklyplan.png)
+
